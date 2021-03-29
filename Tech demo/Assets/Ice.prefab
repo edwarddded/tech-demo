@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7122277340780583881}
   - component: {fileID: 224910075867832310}
   m_Layer: 0
-  m_Name: Sliver
+  m_Name: Fire 1
   m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2561345123817650640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.08, y: -2.54, z: -1.4169922}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: -5.08, y: -2.6369, z: -1.4169922}
+  m_LocalScale: {x: 0.5, y: 0.30610728, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 1942777921290549423, guid: 274d64617113287499ed1c4165d1d8f3,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.03404235, g: 0.3571013, b: 0.8018868, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

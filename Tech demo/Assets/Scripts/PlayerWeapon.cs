@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class weapon : MonoBehaviour
+public class PlayerWeapon : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject bulletprefabs;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

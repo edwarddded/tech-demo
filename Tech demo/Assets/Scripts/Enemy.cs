@@ -2,31 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyMovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     private float speed = 3f;
     public float PositionMin;
     public float PositionMax;
+
+    public GameObject item;
+
     SpriteRenderer sr;
-    public float health = 2f;
+    public float health = 3f;
+
     // Start is called before the first frame update
     void Start()
     {
         sr = gameObject.GetComponent<SpriteRenderer>();
     }
  
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Fire")
-        {
-            Destroy(collision.gameObject);
-            health--;
-            if (health == 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
     // Update is called once per frame
     void Update()
     {
@@ -41,5 +33,20 @@ public class enemyMovement : MonoBehaviour
             speed = -speed;
             sr.flipX = true;
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Instantiate(item, gameObject.transform.position, gameObject.transform.rotation);
+        Destroy(gameObject);    
     }
 }

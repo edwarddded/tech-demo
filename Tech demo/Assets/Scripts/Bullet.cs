@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 10f;
     public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -16,5 +16,16 @@ public class bullet : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Enemy enemy = col.GetComponent<Enemy>();
+        if(enemy != null)
+        {
+            enemy.TakeDamage(1f);
+            Destroy(gameObject);
+        }
+
     }
 }

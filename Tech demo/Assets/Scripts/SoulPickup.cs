@@ -20,35 +20,37 @@ public class SoulPickup : MonoBehaviour
             {
                 if(soulInventory.abilityIndex[i] == skillIndexNumber)
                 {
-                    if(soulInventory.isFull[i] == false)
+                    if (soulInventory.isFull[i] == true) {
+                        Debug.Log("Cannot hold anymore of this ability");
+                        break;
+                    }
+                    else if(soulInventory.isFull[i] == false)
                     {
-                        Debug.Log("Adding extra use for this skill");
+                        Debug.Log("Adding extra use for this ability");
                         soulInventory.abilityCharges[i] += 1;
+                        Destroy(gameObject);
+                        Debug.Log("Slot number: " + i + " Ability Charges: " + soulInventory.abilityCharges[i]);
+                        
 
                         if(soulInventory.abilityCharges[i] >= 3)
                         {
-                            Debug.Log("Capacity for this skill reached");
+                            Debug.Log("Capacity for this ability reached");
                             soulInventory.isFull[i] = true;
-                            Destroy(gameObject);
                             break;
                         }
                     }
-                    else if(soulInventory.isFull[i] == true)
-                    {
-                        Debug.Log("Cannot hold anymore of this skill");
-                        break;
-                    }
 
+                    break;
                 }
 
                 Debug.Log("Currently at ability slot " + i);
-                Debug.Log("Attempting to add skill");
+                Debug.Log("Attempting to add new ability");
                 if(soulInventory.isFull[i] == false && soulInventory.abilityIndex[i] == 0)
                 {
-                    Debug.Log("Adding new skill");
+                    Debug.Log("Adding new ability");
                     soulInventory.abilityIndex[i] = skillIndexNumber;
                     soulInventory.abilityCharges[i] = 1;
-
+                    Debug.Log("Slot number: " + i + " Ability Charges: " + soulInventory.abilityCharges[i]);
                     Destroy(gameObject);
                     break;
                 }

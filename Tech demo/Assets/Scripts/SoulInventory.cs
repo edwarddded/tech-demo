@@ -29,11 +29,13 @@ public class SoulInventory : MonoBehaviour
         // Calls the UseSkill function which accesses the ability stored in the slot
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            Debug.Log("Attempting to use slot 1");
             UseSkill(0);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("Attempting to use slot 2");
             UseSkill(1);
         }
     }
@@ -42,7 +44,7 @@ public class SoulInventory : MonoBehaviour
     {
         if (abilityIndex[SlotNumber] > 0 && abilityCharges[SlotNumber] > 0)
         {
-            Debug.Log("Activating Skill " + abilityIndex[SlotNumber]);
+            Debug.Log("Activating ability " + abilityIndex[SlotNumber]);
             abilityCharges[SlotNumber] -= 1;
             playerSkills.ActivateAbility(abilityIndex[SlotNumber]);
 
@@ -53,6 +55,10 @@ public class SoulInventory : MonoBehaviour
             {
                 abilityIndex[SlotNumber] = 0;
             }
+        }
+        else
+        {
+            Debug.Log("Cannot activate ability. Ability slot is empty.");
         }
     }
 

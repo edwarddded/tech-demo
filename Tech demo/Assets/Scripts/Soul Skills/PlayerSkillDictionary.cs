@@ -19,6 +19,8 @@ public class PlayerSkillDictionary : MonoBehaviour
 
         if (abilityIndex == 1)
             IceShot();
+        if (abilityIndex == 2)
+            Test2();
     }
 
     //Below is the collection of all the player skills
@@ -30,6 +32,9 @@ public class PlayerSkillDictionary : MonoBehaviour
     }
 
     // #2 
-
+    void Test2()
+    {
+        Debug.Log("Ability 2 Activated");
+    }
 
 }

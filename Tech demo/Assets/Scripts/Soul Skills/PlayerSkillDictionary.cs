@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerSkillDictionary : MonoBehaviour
 {
+    public Transform firepoint;
+    public GameObject iceShotPrefab;
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class PlayerSkillDictionary : MonoBehaviour
     void IceShot()
     {
         Debug.Log("Ability 1 Activated");
+        Instantiate(iceShotPrefab, firepoint.position, firepoint.rotation);
     }
 
     // #2 

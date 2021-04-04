@@ -214,3 +214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f9e8cf005b0b04885809bec310d07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firepoint: {fileID: 402161043067415842}
+  iceShotPrefab: {fileID: 8280987779013728548, guid: 7be87754410e2eb4eb5e0d2cb1fa96e3,
+    type: 3}

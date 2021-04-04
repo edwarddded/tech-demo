@@ -11,12 +11,13 @@ public class TestScript : MonoBehaviour
         DialogueManager.instance.EnqueueDialogue(dialogue);
 
     }
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D player)
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (player.gameObject.tag == "Player")
         {
-            Debug.Log("Enter pressed");
             TriggerDialogue();
+            Object.Destroy(gameObject);
         }
     }
 }
+

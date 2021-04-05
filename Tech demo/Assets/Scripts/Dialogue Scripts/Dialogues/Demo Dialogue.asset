@@ -21,7 +21,8 @@ MonoBehaviour:
     myText: Welcome to the demo
   - myName: NPC
     portrait: {fileID: 21300000, guid: c0ced59eb0176454886bbc0407e71090, type: 3}
-    myText: Collect the red dots then Press Q or E to test the ability you gained
+    myText: Press J to attack to enemies. Collect the red dots or blue dots then
+      Press Q or E to test the ability you gained
   - myName: NPC
     portrait: {fileID: 21300000, guid: c0ced59eb0176454886bbc0407e71090, type: 3}
     myText: there are different abilities, so test them all out!

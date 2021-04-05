@@ -22,6 +22,8 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Image dialoguePortrait;
     public float delay = 0.001f;
+    private bool isCurrentlyTyping;
+    private string completeText;
 
     public Queue<DialogueBase.Info> dialogueInfo = new Queue<DialogueBase.Info>();
 
@@ -43,22 +45,38 @@ public class DialogueManager : MonoBehaviour
             endOfDialogue();
             return;
         }
+        if (isCurrentlyTyping == true)
+        {
+            CompleteText();
+            StopAllCoroutines();
+            isCurrentlyTyping = false;
+            return;
+        }
         DialogueBase.Info info = dialogueInfo.Dequeue();
+        completeText = info.myText;
         dialogueName.text = info.myName;
         dialogueText.text = info.myText;
         dialoguePortrait.sprite = info.portrait;
+        dialogueText.text = "";
         StartCoroutine(TypeText(info));
     }
 
     IEnumerator TypeText(DialogueBase.Info info)
     {
-        dialogueText.text = "";
+        isCurrentlyTyping = true;
+        
         foreach (char c in info.myText.ToCharArray())
         {
             yield return new WaitForSeconds(delay);
             dialogueText.text += c;
-            yield return null;
+            
         }
+        isCurrentlyTyping = false;
+
+    }
+    private void CompleteText()
+    {
+        dialogueText.text = completeText;
     }
     public void endOfDialogue()
     {

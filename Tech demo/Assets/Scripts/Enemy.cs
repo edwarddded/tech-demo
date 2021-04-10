@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private float speed = 3f;
+    public float speed = 200f;
     public float PositionMin;
     public float PositionMax;
 
@@ -13,28 +13,36 @@ public class Enemy : MonoBehaviour
     SpriteRenderer sr;
     public float health = 3f;
 
+    private Rigidbody2D rb;
+ 
+
+    
     // Start is called before the first frame update
     void Start()
     {
         sr = gameObject.GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        
     }
  
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.left * speed * Time.deltaTime;
-        if (transform.position.x>= PositionMax)
+        rb.velocity = new Vector2(speed * Time.fixedDeltaTime, rb.velocity.y);
+        if (rb.position.x > PositionMax)
         {
-            speed = -speed;
-            sr.flipX = false;
-        }
-        else if (transform.position.x <= PositionMin)
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+            speed *= -1;
+            rb.velocity = new Vector2(speed * Time.fixedDeltaTime, rb.velocity.y);
+        }else if (rb.position.x < PositionMin)
         {
-            speed = -speed;
-            sr.flipX = true;
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+            speed *= -1;
+            rb.velocity = new Vector2(speed * Time.fixedDeltaTime, rb.velocity.y);
         }
     }
-
+   
+  
     public void TakeDamage(float damage)
     {
         health -= damage;

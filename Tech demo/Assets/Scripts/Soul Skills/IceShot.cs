@@ -7,6 +7,7 @@ public class IceShot : MonoBehaviour
     public float speed = 7f;
     public Rigidbody2D rb;
     private int projectileLives = 3;
+    private float time = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class IceShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        ObjectLive();
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -32,5 +33,13 @@ public class IceShot : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+    void ObjectLive()
+    {
+        time -= Time.deltaTime;
+        if (time < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

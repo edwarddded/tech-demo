@@ -43,11 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x) * direction, transform.localScale.y);
         }
-
-        //if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
-        //{
-        //    rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-        //}
+        
     }
     void Update()
     {

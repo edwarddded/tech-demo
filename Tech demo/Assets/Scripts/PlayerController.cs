@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float JumpForce = 5f;
-    public float moveSpeed = 5f;
+    float JumpForce = 1f;
+    float moveSpeed = 8f;
     //public bool isGrounded = false;
     private Rigidbody2D rb;
     private Animator anim;

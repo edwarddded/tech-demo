@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 402161045117807077}
   - component: {fileID: 402161045117807072}
   - component: {fileID: 402161045117807079}
+  - component: {fileID: 1813287749560532711}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -226,6 +227,27 @@ MonoBehaviour:
     type: 3}
   combustPrefab: {fileID: 407204541499098, guid: df3e6dda7031b37439af0fc2de545542,
     type: 3}
+--- !u!114 &1813287749560532711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402161045117807080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b668dd694be9ea43a383b49e64f55bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  numOfHearts: 4
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHearts: {fileID: 0}
+  emptyHearts: {fileID: 0}
 --- !u!1 &8340657549481139911
 GameObject:
   m_ObjectHideFlags: 0

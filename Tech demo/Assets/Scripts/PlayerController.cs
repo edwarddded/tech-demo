@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private float JumpTimeCounter;
     public float jumtime;
     private bool isjumping;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +45,14 @@ public class PlayerController : MonoBehaviour
         if (direction != 0f)
         {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x) * direction, transform.localScale.y);
+           
 
             if (transform.localScale.x == -1)
                 fp.transform.rotation = Quaternion.Euler(0, -180, 0);
+
             else
                 fp.transform.rotation = Quaternion.Euler(0, 0, 0);
+          
         }
 
         

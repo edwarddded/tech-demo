@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a5b25e1604b67498d94f1bf2b30079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 20
-  moveSpeed: 5
+  JumpForce: 15
+  moveSpeed: 500
   feetPos: {fileID: 8834820408880542479}
   checkRadius: 0.3
   whatIsGround:
@@ -211,6 +211,8 @@ MonoBehaviour:
     type: 3}
   combustPrefab: {fileID: 407204541499098, guid: df3e6dda7031b37439af0fc2de545542,
     type: 3}
+  flyingEyeSummonPrefab: {fileID: 5573977073706167992, guid: 3ad1010f424ddc042aef81566e11301e,
+    type: 3}
 --- !u!114 &1813287749560532711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,8 +232,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fullHearts: {fileID: 0}
-  emptyHearts: {fileID: 0}
+  fullHearts: {fileID: 1235773518496698137, guid: f8ad86e4ef409754aaf5a046d9ebbfef,
+    type: 3}
+  emptyHearts: {fileID: -3658470707597795582, guid: f8ad86e4ef409754aaf5a046d9ebbfef,
+    type: 3}
 --- !u!61 &3049106472315341637
 BoxCollider2D:
   m_ObjectHideFlags: 0

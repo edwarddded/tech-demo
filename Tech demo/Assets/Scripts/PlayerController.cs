@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     private float JumpTimeCounter;
     public float jumtime;
     private bool isjumping;
-    
 
+    public Animator AnimatorOfCharacter;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,12 +42,14 @@ public class PlayerController : MonoBehaviour
         //movement
         float direction = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveSpeed * direction * Time.fixedDeltaTime, rb.velocity.y);
+
+        AnimatorOfCharacter.SetFloat("Speed", Mathf.Abs(direction));
         if (direction != 0f)
         {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x) * direction, transform.localScale.y);
            
 
-            if (transform.localScale.x == -1)
+            if (transform.localScale.x < 0.1)
                 fp.transform.rotation = Quaternion.Euler(0, -180, 0);
 
             else

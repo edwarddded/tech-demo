@@ -9,6 +9,7 @@ public class PlayerSkillDictionary : MonoBehaviour
     public GameObject iceShotPrefab;
     public GameObject combustPrefab;
     public GameObject flyingEyeSummonPrefab;
+    public GameObject mushroomBombPrefab;
 
     void Start()
     {
@@ -28,6 +29,8 @@ public class PlayerSkillDictionary : MonoBehaviour
             Combust();
         if (abilityIndex == 3)
             FlyingEyeSummon();
+        if (abilityIndex == 4)
+            MushroomBomb();
     }
 
     //Below is the collection of all the player skills
@@ -64,6 +67,12 @@ public class PlayerSkillDictionary : MonoBehaviour
     void FlyingEyeSummon()
     {
         Debug.Log("Ability 3 Flying Eye Summon Activated");
-        Instantiate(flyingEyeSummonPrefab, this.transform.position + new Vector3(0,3,0), this.transform.rotation);
+        Instantiate(flyingEyeSummonPrefab, this.transform.position + new Vector3(0,2,0), firepoint.rotation);
+    }
+
+    void MushroomBomb()
+    {
+        Debug.Log("Ability 4 Mushroom Bomb Activated");
+        Instantiate(mushroomBombPrefab, firepoint.position, firepoint.rotation);
     }
 }

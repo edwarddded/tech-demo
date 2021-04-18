@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5778695618674740577}
   - component: {fileID: 5778695618674740591}
   - component: {fileID: 5778695618674740588}
-  - component: {fileID: 5778695618674740590}
   - component: {fileID: 5778695618674740579}
+  - component: {fileID: 4274003345373394893}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Enemy
@@ -31,7 +31,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.7476845, y: -2.67, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
-  m_Children: []
+  m_Children:
+  - {fileID: 88123234647112678}
+  - {fileID: 6663404486220415167}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,8 +124,13 @@ MonoBehaviour:
   speed: 200
   PositionMin: -10
   PositionMax: 5
-  item: {fileID: 1010919341802417414, guid: 778e6a1d1c4872a40bd746dbfb67db8d, type: 3}
+  item: {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   health: 3
+<<<<<<< HEAD
+  EnemyAni: {fileID: 5778695618674740579}
+  Player: {fileID: 402161045117807080, guid: b17e9dc8951a1284fab21fefe4517fbd, type: 3}
+  Sightendpos: {fileID: 6663404486220415167}
+  spotted: 0
 --- !u!58 &5778695618674740590
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -140,6 +147,8 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.185
+=======
+>>>>>>> f06336d3be3d54dc3b6ed9382752c8de6424e878
 --- !u!95 &5778695618674740579
 Animator:
   serializedVersion: 3
@@ -159,3 +168,81 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< HEAD
+--- !u!1 &6791670367239488657
+GameObject:
+=======
+--- !u!70 &4274003345373394893
+CapsuleCollider2D:
+>>>>>>> f06336d3be3d54dc3b6ed9382752c8de6424e878
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 88123234647112678}
+  m_Layer: 0
+  m_Name: RC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &88123234647112678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791670367239488657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.138, y: 0.071, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5778695618674740576}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7616020068949634128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6663404486220415167}
+  m_Layer: 0
+  m_Name: SightEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6663404486220415167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7616020068949634128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.546, y: -0.028, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5778695618674740576}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_GameObject: {fileID: 5778695618674740589}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.23, y: 0.37}
+  m_Direction: 0
+>>>>>>> f06336d3be3d54dc3b6ed9382752c8de6424e878

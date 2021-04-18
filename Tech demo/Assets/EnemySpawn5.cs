@@ -22,22 +22,19 @@ public class EnemySpawn5 : MonoBehaviour
 
         if (random == 1)
         {
-            Enemy1.GetComponent<Enemy>().PositionMin = 166f;
-            Enemy1.GetComponent<Enemy>().PositionMax = 178f;
+            
             whereToSpawn = new Vector2(randX, transform.position.y);
             Instantiate(Enemy1, whereToSpawn, Quaternion.identity);
         }
         if (random == 2)
         {
-            Enemy2.GetComponent<Enemy>().PositionMin = 166f;
-            Enemy2.GetComponent<Enemy>().PositionMax = 178f;
+            
             whereToSpawn = new Vector2(randX, transform.position.y);
             Instantiate(Enemy2, whereToSpawn, Quaternion.identity);
         }
         if (random == 3)
         {
-            Enemy3.GetComponent<Enemy>().PositionMin = 166f;
-            Enemy3.GetComponent<Enemy>().PositionMax = 178f;
+            
             whereToSpawn = new Vector2(randX, transform.position.y);
             Instantiate(Enemy3, whereToSpawn, Quaternion.identity);
         }

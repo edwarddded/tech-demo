@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 1813287749560532711}
   - component: {fileID: 3049106472315341637}
   - component: {fileID: 5763554479114835428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a5b25e1604b67498d94f1bf2b30079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 15
+  JumpForce: 1
   moveSpeed: 500
   feetPos: {fileID: 8834820408880542479}
   checkRadius: 0.3
@@ -214,6 +214,8 @@ MonoBehaviour:
   combustPrefab: {fileID: 407204541499098, guid: df3e6dda7031b37439af0fc2de545542,
     type: 3}
   flyingEyeSummonPrefab: {fileID: 5573977073706167992, guid: 3ad1010f424ddc042aef81566e11301e,
+    type: 3}
+  mushroomBombPrefab: {fileID: 1054834782904023998, guid: a91ddaedb586ef44ebabd4e5abb5f6ca,
     type: 3}
 --- !u!114 &1813287749560532711
 MonoBehaviour:

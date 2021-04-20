@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699c98750db3dbf4ab40857017f88727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilityIcon: {fileID: 7068270049436055124, guid: f54aafa97fc201c45a44a58874495a7f,
+    type: 3}
   skillIndexNumber: 3
 --- !u!70 &6984915468311315266
 CapsuleCollider2D:

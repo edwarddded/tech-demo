@@ -15,6 +15,7 @@ public class swamp : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            collision.gameObject.transform.position = new Vector2(-23.8f, 4);
         }
     }
     // Update is called once per frame

@@ -23,7 +23,8 @@ public class Health : MonoBehaviour
             health -= damage;
             Debug.Log(health);
         }
-       
+      
+
     }
     // Update is called once per frame
     void Update()

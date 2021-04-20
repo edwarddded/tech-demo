@@ -9,7 +9,7 @@ TagManager:
   - Enemy
   - thorn
   - swamp
-  - portal
+  - turn
   layers:
   - Default
   - TransparentFX
@@ -20,7 +20,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Player
   - 
   - 
   - 

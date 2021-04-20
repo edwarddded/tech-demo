@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(moveSpeed * direction * Time.fixedDeltaTime, rb.velocity.y);
 
         AnimatorOfCharacter.SetFloat("Speed", Mathf.Abs(direction));
+
         if (direction != 0f)
         {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x) * direction, transform.localScale.y);

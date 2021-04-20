@@ -10,6 +10,7 @@ TagManager:
   - thorn
   - swamp
   - turn
+  - protal
   layers:
   - Default
   - TransparentFX

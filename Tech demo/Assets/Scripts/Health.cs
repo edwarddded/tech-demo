@@ -8,13 +8,12 @@ public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
     public int health;
-    public int numOfHearts;
 
-    public Image[] hearts;
-    public Sprite fullHearts;
-    public Sprite emptyHearts;
+    public GameObject fullHearts1, fullhearts2, fullhearts3,fullhearts4;
+    public GameObject emptyHearts1, emptyHearts2, emptyHearts3, emptyHearts4;
 
     private int damage = 1;
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag =="Enemy")
@@ -29,32 +28,30 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health ==0)
+        if (health == 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (health > numOfHearts)
+        else if (health == 3)
         {
-            health = numOfHearts;
+            fullhearts4.gameObject.SetActive(false);
         }
-        for (int i = 0; i < hearts.Length; i++)
+        else if (health == 2)
         {
-            if (i < health)
-            {
-                hearts[i].sprite = fullHearts;
-            }
-            else
-            {
-                hearts[i].sprite = emptyHearts;
-            }
-            if (i < numOfHearts)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
+            fullhearts4.gameObject.SetActive(false);
+            fullhearts3.gameObject.SetActive(false);
+        }
+        else if (health ==1)
+        {
+            fullhearts3.gameObject.SetActive(false);
+            fullhearts2.gameObject.SetActive(false);
+            fullhearts4.gameObject.SetActive(false);
+        }else if (health ==0)
+        {
+            fullHearts1.gameObject.SetActive(false);
+            fullhearts3.gameObject.SetActive(false);
+            fullhearts2.gameObject.SetActive(false);
+            fullhearts4.gameObject.SetActive(false);
         }
     }
 }

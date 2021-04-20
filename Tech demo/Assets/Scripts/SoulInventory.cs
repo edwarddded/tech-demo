@@ -39,11 +39,15 @@ public class SoulInventory : MonoBehaviour
             Debug.Log("Attempting to use slot 1");
             UseSkill(0);
         }
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             Debug.Log("Attempting to use slot 2");
             UseSkill(1);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Attempting to use slot 3");
+            UseSkill(2);
         }
     }
 

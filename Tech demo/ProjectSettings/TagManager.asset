@@ -11,6 +11,7 @@ TagManager:
   - swamp
   - turn
   - protal
+  - forestbossPortal
   layers:
   - Default
   - TransparentFX

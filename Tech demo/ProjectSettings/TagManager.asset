@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - thorn
   - swamp
+  - portal
   layers:
   - Default
   - TransparentFX

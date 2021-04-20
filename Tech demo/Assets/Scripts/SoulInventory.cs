@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoulInventory : MonoBehaviour
 {
@@ -11,16 +12,22 @@ public class SoulInventory : MonoBehaviour
     public int[] abilityCharges;
     public int[] abilityIndex;
 
+    public GameObject[] uiSlots;
+    public GameObject[] uiIcons;
+    public Text[] skillChargesTxt;
+
+    private int maxAbilityUses;
+
     // Start is called before the first frame update
     void Start()
     {
-        abilitySlots = 5;
-        isFull = new bool[5];
-        abilityCharges = new int[5];
-        abilityIndex = new int[5];
+        maxAbilityUses = 3;
 
-        //For the sake of testing / tech demo, reseting inventory
-        ClearInventory();
+        abilitySlots = 4;
+        isFull = new bool[4];
+        abilityCharges = new int[4];
+        abilityIndex = new int[4];
+
     }
 
     // Update is called once per frame
@@ -48,12 +55,16 @@ public class SoulInventory : MonoBehaviour
             abilityCharges[SlotNumber] -= 1;
             playerSkills.ActivateAbility(abilityIndex[SlotNumber]);
 
-            if (abilityCharges[SlotNumber] < 3)
+            // Update UI text
+            skillChargesTxt[SlotNumber].text = abilityCharges[SlotNumber].ToString();
+
+            if (abilityCharges[SlotNumber] < maxAbilityUses)
                 isFull[SlotNumber] = false;
 
             if (abilityCharges[SlotNumber] <= 0)
             {
                 abilityIndex[SlotNumber] = 0;
+                Destroy(uiIcons[SlotNumber]);
             }
         }
         else
@@ -65,10 +76,11 @@ public class SoulInventory : MonoBehaviour
     // Mostly using this method on game reset
     public void ClearInventory() { 
 
-        for(int i = 0; i < abilitySlots; i++)
+        for(int i = 0; i < abilitySlots-1; i++)
         {
             abilityIndex[i] = 0;
             abilityCharges[i] = 0;
+            isFull[i] = false;
         }
 
     }

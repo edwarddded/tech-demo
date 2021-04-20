@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a5b25e1604b67498d94f1bf2b30079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1
+  JumpForce: 15
   moveSpeed: 500
   feetPos: {fileID: 8834820408880542479}
   checkRadius: 0.3
@@ -196,6 +196,21 @@ MonoBehaviour:
   abilitySlots: 0
   abilityCharges: 
   abilityIndex: 
+  uiSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  uiIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  skillChargesTxt:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &402161045117807079
 MonoBehaviour:
   m_ObjectHideFlags: 0

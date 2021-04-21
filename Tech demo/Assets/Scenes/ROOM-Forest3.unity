@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 527990546}
   - component: {fileID: 527990545}
   m_Layer: 0
-  m_Name: Portal (1)
+  m_Name: BeginPortal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1264,7 +1264,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1148584289}
   - component: {fileID: 1148584288}
-  - component: {fileID: 1148584290}
   m_Layer: 0
   m_Name: Swamp
   m_TagString: swamp
@@ -1312,20 +1311,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1148584290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148584287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10a450d1a4b7e914d8d3a2404734bd18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 1813287749560532711, guid: b17e9dc8951a1284fab21fefe4517fbd, type: 3}
-  OriginalPoint: {fileID: 527990546}
 --- !u!1 &1161635880
 GameObject:
   m_ObjectHideFlags: 0

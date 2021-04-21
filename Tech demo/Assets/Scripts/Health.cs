@@ -13,6 +13,12 @@ public class Health : MonoBehaviour
     public GameObject emptyHearts1, emptyHearts2, emptyHearts3, emptyHearts4;
 
     private int damage = 1;
+    private Vector3 BeginPoint;
+
+    public void Start()
+    {
+       
+    }
     //need to improve
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -22,7 +28,19 @@ public class Health : MonoBehaviour
             health -= damage;
             Debug.Log(health);
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "swamp")
+        {
+            BeginPoint = GameObject.Find("BeginPortal").transform.position;
+            Debug.Log(BeginPoint);
+            Debug.Log(other.gameObject.name);
+            health -= damage;
+            Debug.Log(health);
+            gameObject.transform.position = BeginPoint;
+        }
     }
     // Update is called once per frame
     void Update()

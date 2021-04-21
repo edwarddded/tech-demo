@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class swamp : MonoBehaviour
 {
+    public Health health;
+    public Transform OriginalPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +16,8 @@ public class swamp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            collision.gameObject.transform.position = new Vector2(-23.8f, 4);
+            health.health -= 1;
+            collision.gameObject.transform.position = OriginalPoint.position;
         }
     }
     // Update is called once per frame

@@ -2,42 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawn4 : MonoBehaviour
+public class enemSpawnNew : MonoBehaviour
 {
     public GameObject Enemy1;
     public GameObject Enemy2;
     public GameObject Enemy3;
-    int random;
-
-    float randX;
-    
+    public float MiniX;
+    public float MaxX;
     Vector2 whereToSpawn;
     // Start is called before the first frame update
     void Start()
     {
-        random = Random.Range(1, 4);
-        randX = Random.Range(81, 83f);
-        
+        int random = Random.Range(1, 4);
+        float randx = Random.Range(MiniX, MaxX);
         Debug.Log(random);
-
+        whereToSpawn = new Vector2(randx, transform.position.y);
         if (random == 1)
         {
-            
-            whereToSpawn = new Vector2(randX, transform.position.y);
             Instantiate(Enemy1, whereToSpawn, Quaternion.identity);
         }
-        if (random == 2)
+        else if (random ==2)
         {
-            
-            whereToSpawn = new Vector2(randX, transform.position.y);
             Instantiate(Enemy2, whereToSpawn, Quaternion.identity);
         }
-        if (random == 3)
+        else 
         {
-           
-            whereToSpawn = new Vector2(randX, transform.position.y);
             Instantiate(Enemy3, whereToSpawn, Quaternion.identity);
         }
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

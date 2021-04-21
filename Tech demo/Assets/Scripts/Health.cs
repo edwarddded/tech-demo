@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     public GameObject emptyHearts1, emptyHearts2, emptyHearts3, emptyHearts4;
 
     private int damage = 1;
-
+    //need to improve
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag =="Enemy")
@@ -22,7 +22,6 @@ public class Health : MonoBehaviour
             health -= damage;
             Debug.Log(health);
         }
-      
 
     }
     // Update is called once per frame
@@ -30,7 +29,8 @@ public class Health : MonoBehaviour
     {
         if (health == 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(5);
+            Destroy(gameObject);
         }
         else if (health == 3)
         {

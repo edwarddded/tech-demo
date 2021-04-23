@@ -70,10 +70,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8323511412006162414}
   - component: {fileID: 8323511412006162415}
-  - component: {fileID: 8323511412006162412}
   - component: {fileID: 8323511412006162413}
   - component: {fileID: 8323511412006162402}
   - component: {fileID: 8323511412006162409}
+  - component: {fileID: 8529762184780402253}
   m_Layer: 0
   m_Name: fly eye
   m_TagString: Enemy
@@ -148,22 +148,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &8323511412006162412
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8323511412006162403}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.41, y: 0.31}
-  m_Direction: 0
 --- !u!50 &8323511412006162413
 Rigidbody2D:
   serializedVersion: 4
@@ -198,14 +182,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
-  PositionMin: 74
-  PositionMax: 130
   item: {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
   health: 3
   EnemyAni: {fileID: 8323511412006162409}
   Player: {fileID: 402161045117807080, guid: b17e9dc8951a1284fab21fefe4517fbd, type: 3}
   Sightendpos: {fileID: 9222339623777805023}
   spotted: 0
+  enemyright: 1
 --- !u!95 &8323511412006162409
 Animator:
   serializedVersion: 3
@@ -225,3 +208,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &8529762184780402253
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8323511412006162403}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.41, y: 0.31}
+    newSize: {x: 0.41, y: 0.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.41, y: 0.31}
+  m_EdgeRadius: 0

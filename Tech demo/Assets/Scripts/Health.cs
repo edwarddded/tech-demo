@@ -41,6 +41,12 @@ public class Health : MonoBehaviour
             Debug.Log(health);
             gameObject.transform.position = BeginPoint;
         }
+        if (other.gameObject.tag == "Laser")
+        {
+            Debug.Log(other.gameObject.name);
+            health -= damage;
+            Debug.Log(health);
+        }
     }
     // Update is called once per frame
     void Update()

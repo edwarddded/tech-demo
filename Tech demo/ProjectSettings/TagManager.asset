@@ -12,6 +12,8 @@ TagManager:
   - turn
   - protal
   - forestbossPortal
+  - Boss
+  - Laser
   layers:
   - Default
   - TransparentFX

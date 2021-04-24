@@ -19,7 +19,7 @@ public class SoulPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            for(int i = 0; i < soulInventory.abilitySlots-1; i++)
+            for(int i = 0; i < soulInventory.abilitySlots; i++)
             {
                 if(soulInventory.abilityIndex[i] == skillIndexNumber)
                 {

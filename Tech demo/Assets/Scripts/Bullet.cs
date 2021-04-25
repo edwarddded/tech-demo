@@ -28,5 +28,14 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
+        Boss boss = col.GetComponent<Boss>();
+        if (boss)
+        {
+            boss.TakeDamage(2f);
+            Destroy(gameObject);
+
+            Debug.Log(boss.BossHealth);
+        }
+
     }
 }

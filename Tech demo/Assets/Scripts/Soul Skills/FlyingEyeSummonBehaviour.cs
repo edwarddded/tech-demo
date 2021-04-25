@@ -25,6 +25,12 @@ public class FlyingEyeSummonBehaviour : MonoBehaviour
             enemy.TakeDamage(3f);
             Destroy(gameObject);
         }
+        Boss boss = col.GetComponent<Boss>();
+        if (boss != null)
+        {
+            boss.TakeDamage(3f);
+            Destroy(gameObject);
+        }
     }
 
 }

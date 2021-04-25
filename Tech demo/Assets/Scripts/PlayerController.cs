@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         canMove = true;
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         fp = transform.Find("firePoint").gameObject;
@@ -77,9 +78,18 @@ public class PlayerController : MonoBehaviour
         if (!canMove)
         {
             rb.velocity = Vector2.zero;
+            AnimatorOfCharacter.SetBool("hasStopped", true);
             return;
 
         }
+        else
+        {
+            AnimatorOfCharacter.SetBool("hasStopped", false);
+            
+
+        }
+
+
         //movement
         float direction = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveSpeed * direction * Time.fixedDeltaTime, rb.velocity.y);

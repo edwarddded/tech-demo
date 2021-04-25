@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private float JumpTimeCounter;
     public float jumtime;
     private bool isjumping;
+    public bool canMove;
 
     public Animator AnimatorOfCharacter;
     public static PlayerController instance;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canMove = true;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         fp = transform.Find("firePoint").gameObject;
@@ -72,6 +74,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!canMove)
+        {
+            rb.velocity = Vector2.zero;
+            return;
+
+        }
         //movement
         float direction = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveSpeed * direction * Time.fixedDeltaTime, rb.velocity.y);

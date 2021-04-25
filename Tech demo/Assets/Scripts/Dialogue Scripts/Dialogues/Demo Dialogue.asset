@@ -17,10 +17,12 @@ MonoBehaviour:
     portrait: {fileID: 21300000, guid: c0ced59eb0176454886bbc0407e71090, type: 3}
     myText: Hello Jaime!
   - myName: NPC
-    portrait: {fileID: 21300000, guid: c0ced59eb0176454886bbc0407e71090, type: 3}
+    portrait: {fileID: -8761437193350918543, guid: 5c92d921547e9430baa9d4903fdc0592,
+      type: 3}
     myText: Welcome to the demo
   - myName: NPC
-    portrait: {fileID: 21300000, guid: c0ced59eb0176454886bbc0407e71090, type: 3}
+    portrait: {fileID: -7008412969330441016, guid: fed088a2b815edb4897e8ae349887ef6,
+      type: 3}
     myText: Press J to attack to enemies. Collect the red dots or blue dots then
       Press Q or E to test the ability you gained
   - myName: NPC

@@ -14,17 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueinfo:
   - myName: NPC
-    portrait: {fileID: 21300000, guid: c0ced59eb0176454886bbc0407e71090, type: 3}
-    myText: Hello Jaime!
+    portrait: {fileID: 21300000, guid: 020f8df349b504099accd87b555a3390, type: 3}
+    myText: test
   - myName: NPC
-    portrait: {fileID: -8761437193350918543, guid: 5c92d921547e9430baa9d4903fdc0592,
-      type: 3}
-    myText: Welcome to the demo
+    portrait: {fileID: 21300000, guid: 020f8df349b504099accd87b555a3390, type: 3}
+    myText: testing testing
   - myName: NPC
-    portrait: {fileID: -7008412969330441016, guid: fed088a2b815edb4897e8ae349887ef6,
-      type: 3}
-    myText: Press J to attack to enemies. Collect the red dots or blue dots then
-      Press Q or E to test the ability you gained
+    portrait: {fileID: 21300000, guid: 020f8df349b504099accd87b555a3390, type: 3}
+    myText: still havent thought of a script lol
   - myName: NPC
     portrait: {fileID: 21300000, guid: c0ced59eb0176454886bbc0407e71090, type: 3}
     myText: there are different abilities, so test them all out!

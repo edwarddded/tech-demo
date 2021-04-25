@@ -32,6 +32,14 @@ public class IceShot : MonoBehaviour
             if(projectileLives <= 0)
             Destroy(gameObject);
         }
+        Boss boss = col.GetComponent<Boss>();
+        if (boss != null)
+        {
+            projectileLives -= 1;
+            boss.TakeDamage(3f);
 
+            if (projectileLives <= 0)
+                Destroy(gameObject);
+        }
     }
 }

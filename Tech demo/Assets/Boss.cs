@@ -19,7 +19,7 @@ public class Boss : MonoBehaviour
     void Start()
     {
      
-        Portal = GameObject.Find("BeginPoint").transform;
+        Portal = GameObject.Find("BeginPortal").transform;
         BossHealth = 50f;
         healthBar = GameObject.Find("Healthbar").GetComponent<BossHealthBar>();
         healthBar.setMaxHealth(BossHealth);
@@ -40,6 +40,11 @@ public class Boss : MonoBehaviour
         }else if (BossHealth < 40 && rand == 3)
         {
             Instantiate(item3, Portal.transform.position, Portal.transform.rotation);
+        }
+        if (BossHealth <20 && BossHealth >3)
+        {
+            SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+            sr.material.color = Color.red;
         }
         if (BossHealth <= 0)
         {

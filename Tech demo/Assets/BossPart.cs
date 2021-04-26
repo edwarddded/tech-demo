@@ -13,7 +13,7 @@ public class BossPart : MonoBehaviour
     {
         boss = transform.parent.gameObject.GetComponent<Boss>();
         armHealth = 10f;
-        Portal = GameObject.Find("BeginPoint").transform;
+        Portal = GameObject.Find("BeginPortal").transform;
     }
 
     public void TakeDamage(float damage)

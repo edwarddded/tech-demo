@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         thePlayer = FindObjectOfType<PlayerController>();
+        
     }
 
     public GameObject dialogueBox;
@@ -26,16 +27,20 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Image dialoguePortrait;
     public float delay = 0.001f;
-    private bool isCurrentlyTyping;
+    public bool isCurrentlyTyping;
     private string completeText;
     private PlayerController thePlayer;
+ 
+
 
     public Queue<DialogueBase.Info> dialogueInfo = new Queue<DialogueBase.Info>();
 
     public void EnqueueDialogue (DialogueBase db)
     {
+   
         dialogueBox.SetActive(true);
         thePlayer.canMove = false;
+        
         dialogueInfo.Clear();
         foreach (DialogueBase.Info info in db.dialogueinfo)
         {
@@ -88,5 +93,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         thePlayer.canMove = true;
+       
+
     }
 }

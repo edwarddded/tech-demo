@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public float JumpForce = 1f;
     public float moveSpeed = 20f;
+    public float climbSpeed = 10f;
     //public bool isGrounded = false;
     private Rigidbody2D rb;
     private Animator anim;
@@ -22,6 +23,12 @@ public class PlayerController : MonoBehaviour
     public float jumtime;
     private bool isjumping;
     public bool canMove;
+
+    private bool isClimbing;
+    private float inputHorizontal;
+    private float inputVertical;
+    public float distance;
+    public LayerMask whatIsClimbable;
 
     public Animator AnimatorOfCharacter;
     public static PlayerController instance;
@@ -99,8 +106,35 @@ public class PlayerController : MonoBehaviour
           
         }
 
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, whatIsClimbable);
+
+        if(hitInfo.collider != null)
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                isClimbing = true;
+            } else {
+                if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    isClimbing = false;
+                }
+            }
+        }
+
+        if(isClimbing == true && hitInfo.collider != null)
+        {
+            inputVertical = Input.GetAxisRaw("Vertical");
+            rb.velocity = new Vector2(rb.velocity.x, inputVertical * climbSpeed);
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = 5;
+        }
+
         
     }
+
     void Update()
     {
         IsGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);

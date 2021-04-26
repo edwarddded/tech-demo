@@ -131,7 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 15205534}
   - component: {fileID: 15205533}
-  m_Layer: 0
+  - component: {fileID: 15205535}
+  m_Layer: 10
   m_Name: vine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,6 +203,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &15205535
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15205532}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06867819, y: 0.0013541579}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.11699651, y: 1.0731236}
+  m_EdgeRadius: 0
 --- !u!1 &24528836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,11 +3198,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 402161045117807077, guid: b17e9dc8951a1284fab21fefe4517fbd,
         type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 458448976}
-    - target: {fileID: 402161045117807077, guid: b17e9dc8951a1284fab21fefe4517fbd,
-        type: 3}
       propertyPath: vcam
       value: 
       objectReference: {fileID: 458448977}
@@ -3183,11 +3205,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1813287749560532711, guid: b17e9dc8951a1284fab21fefe4517fbd,
-        type: 3}
-      propertyPath: health
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1813287749560532711, guid: b17e9dc8951a1284fab21fefe4517fbd,
         type: 3}
@@ -3229,31 +3246,6 @@ PrefabInstance:
       propertyPath: emptyHearts4
       value: 
       objectReference: {fileID: 1722962346}
-    - target: {fileID: 1813287749560532711, guid: b17e9dc8951a1284fab21fefe4517fbd,
-        type: 3}
-      propertyPath: hearts.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1813287749560532711, guid: b17e9dc8951a1284fab21fefe4517fbd,
-        type: 3}
-      propertyPath: hearts.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1813287749560532711, guid: b17e9dc8951a1284fab21fefe4517fbd,
-        type: 3}
-      propertyPath: hearts.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1813287749560532711, guid: b17e9dc8951a1284fab21fefe4517fbd,
-        type: 3}
-      propertyPath: hearts.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3049106472315341637, guid: b17e9dc8951a1284fab21fefe4517fbd,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b17e9dc8951a1284fab21fefe4517fbd, type: 3}
 --- !u!1 &814365319

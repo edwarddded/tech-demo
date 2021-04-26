@@ -1843,15 +1843,15 @@ GameObject:
   - component: {fileID: 1177923497}
   - component: {fileID: 1177923496}
   - component: {fileID: 1177923495}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: vine1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!68 &1177923495
-EdgeCollider2D:
+--- !u!61 &1177923495
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1863,11 +1863,19 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.074869946, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.07234217, y: 1}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.056868374, y: -0.5111855}
-  - {x: -0.09292302, y: 0.43186355}
 --- !u!212 &1177923496
 SpriteRenderer:
   m_ObjectHideFlags: 0

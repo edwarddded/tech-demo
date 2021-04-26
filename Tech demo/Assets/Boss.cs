@@ -12,14 +12,18 @@ public class Boss : MonoBehaviour
     public GameObject item2;
     public GameObject item3;
 
+ 
+
     private BossHealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
+     
         Portal = GameObject.Find("BeginPoint").transform;
         BossHealth = 50f;
         healthBar = GameObject.Find("Healthbar").GetComponent<BossHealthBar>();
-        healthBar.setMaxHealth(BossHealth);   
+        healthBar.setMaxHealth(BossHealth);
+        
     }
     
     public void TakeDamage(float damage)
@@ -50,6 +54,7 @@ public class Boss : MonoBehaviour
     }
     void SetAttackAnimation()
     {
+       
         time = time - Time.deltaTime;
         //Debug.Log(time);
         if (time < 0)

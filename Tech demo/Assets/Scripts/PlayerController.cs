@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!canMove)
+        if (!canMove) // freezing player
         {
             rb.velocity = Vector2.zero;
             AnimatorOfCharacter.SetBool("hasStopped", true);

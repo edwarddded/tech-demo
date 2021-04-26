@@ -87,17 +87,13 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             AnimatorOfCharacter.SetBool("hasStopped", true);
             return;
-
         }
         else
         {
-            AnimatorOfCharacter.SetBool("hasStopped", false);
-            
-
+            AnimatorOfCharacter.SetBool("hasStopped", false);           
         }
-
-
-        //movement
+       
+        //Player movement
         float direction = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveSpeed * direction * Time.fixedDeltaTime, rb.velocity.y);
 
@@ -147,6 +143,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //Player Jump
         IsGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
         if (IsGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {

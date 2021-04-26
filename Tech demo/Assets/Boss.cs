@@ -50,7 +50,9 @@ public class Boss : MonoBehaviour
     void Die()
     {
         //Instantiate(item, gameObject.transform.position, gameObject.transform.rotation);
-        Destroy(gameObject);
+        SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+        Destroy(sr);
+        Ani.SetBool("dialoguePlay", true);
     }
     void SetAttackAnimation()
     {

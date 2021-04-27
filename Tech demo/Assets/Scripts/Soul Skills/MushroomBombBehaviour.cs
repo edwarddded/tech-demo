@@ -8,7 +8,7 @@ public class MushroomBombBehaviour : MonoBehaviour
     public float speed = 4;
     public Vector3 LaunchOffset;
     public bool Thrown;
-    private int projectileLives = 3;
+    public GameObject explosionEffect;
 
     void Start()
     {
@@ -18,9 +18,10 @@ public class MushroomBombBehaviour : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(direction * speed, ForceMode2D.Impulse);
         }
         transform.Translate(LaunchOffset);
-        Destroy(gameObject, 5);
+        Invoke("Explode", 2);
     }
 
+    /*
     void OnCollisionEnter2D(Collision2D collision)
     {
         Enemy enemy = collision.collider.GetComponent<Enemy>();
@@ -41,5 +42,33 @@ public class MushroomBombBehaviour : MonoBehaviour
             if (projectileLives <= 0)
                 Destroy(gameObject);
         }
+    } */
+
+    void Explode()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(this.transform.position, 2f);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].CompareTag("Enemy"))
+            {
+                Enemy enemy = colliders[i].gameObject.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(3f);
+                }
+            }
+            if (colliders[i].CompareTag("Boss"))
+            {
+                Boss boss = colliders[i].gameObject.GetComponent<Boss>();
+                if (boss != null)
+                {
+                    boss.TakeDamage(3f);
+                }
+            }
+        }
+
+        Instantiate(explosionEffect, this.transform.position, this.transform.rotation);
+
+        Destroy(gameObject);
     }
 }

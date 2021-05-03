@@ -64,7 +64,13 @@ public class MushroomBombBehaviour : MonoBehaviour
                 {
                     boss.TakeDamage(3f);
                 }
+                BossPart bossPart = colliders[i].gameObject.GetComponent<BossPart>();
+                if (bossPart != null)
+                {
+                    bossPart.TakeDamage(3f);
+                }
             }
+
         }
 
         Instantiate(explosionEffect, this.transform.position, this.transform.rotation);

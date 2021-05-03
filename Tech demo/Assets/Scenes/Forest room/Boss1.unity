@@ -121,6 +121,82 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &41168396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 41168397}
+  - component: {fileID: 41168399}
+  - component: {fileID: 41168398}
+  m_Layer: 0
+  m_Name: Boss BR Arm Hitbox
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &41168397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41168396}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50.7, y: 29.7, z: 0}
+  m_LocalScale: {x: 200, y: 200, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &41168398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41168396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c009c41e70347ad40b211d7e2804b495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossPartHealth: 10
+  bossGameObject: {fileID: 1465024513}
+  pickups:
+  - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
+  - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
+  - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+--- !u!61 &41168399
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41168396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.21981531, y: 0.035127006}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.081817746, y: 0.077324554}
+  m_EdgeRadius: 0
 --- !u!1 &134218224
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c009c41e70347ad40b211d7e2804b495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armHealth: 0
+  bossPartHealth: 0
+  bossGameObject: {fileID: 0}
   pickups:
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
@@ -942,7 +1019,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &497745970
 GameObject:
@@ -1425,8 +1502,157 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &806853339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806853340}
+  - component: {fileID: 806853342}
+  - component: {fileID: 806853341}
+  m_Layer: 0
+  m_Name: BossTR Arm Hitbox
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &806853340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806853339}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50.7, y: 29.7, z: 0}
+  m_LocalScale: {x: 200, y: 200, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &806853341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806853339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c009c41e70347ad40b211d7e2804b495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossPartHealth: 10
+  bossGameObject: {fileID: 1465024513}
+  pickups:
+  - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
+  - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
+  - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+--- !u!61 &806853342
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806853339}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.112390816, y: 0.09398539}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.0682367, y: 0.079750806}
+  m_EdgeRadius: 0
+--- !u!1 &841372712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 841372713}
+  - component: {fileID: 841372715}
+  - component: {fileID: 841372714}
+  m_Layer: 0
+  m_Name: Boss Core Hitbox
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &841372713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841372712}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50.7, y: 29.7, z: 0}
+  m_LocalScale: {x: 200, y: 200, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841372714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841372712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c009c41e70347ad40b211d7e2804b495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossPartHealth: 20
+  bossGameObject: {fileID: 1465024513}
+  pickups: []
+--- !u!61 &841372715
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841372712}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0021303203, y: -0.09503943}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05522303, y: 0.06088078}
+  m_EdgeRadius: 0
 --- !u!1 &934268261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c009c41e70347ad40b211d7e2804b495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armHealth: 0
+  bossPartHealth: 0
+  bossGameObject: {fileID: 0}
   pickups:
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
@@ -2132,6 +2359,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1345095209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345095210}
+  - component: {fileID: 1345095212}
+  - component: {fileID: 1345095211}
+  m_Layer: 0
+  m_Name: Boss BL Arm Hitbox
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1345095210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345095209}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50.7, y: 29.7, z: 0}
+  m_LocalScale: {x: 200, y: 200, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1345095211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345095209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c009c41e70347ad40b211d7e2804b495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossPartHealth: 10
+  bossGameObject: {fileID: 1465024513}
+  pickups:
+  - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
+  - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
+  - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+--- !u!61 &1345095212
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345095209}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.23025014, y: 0.0260854}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.07778445, y: 0.067407966}
+  m_EdgeRadius: 0
 --- !u!1 &1465024513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,12 +2446,7 @@ GameObject:
   - component: {fileID: 1465024516}
   - component: {fileID: 1465024515}
   - component: {fileID: 1465024514}
-  - component: {fileID: 1465024517}
-  - component: {fileID: 1465024520}
-  - component: {fileID: 1465024519}
-  - component: {fileID: 1465024518}
   - component: {fileID: 1465024521}
-  - component: {fileID: 1465024522}
   m_Layer: 0
   m_Name: ForestBoss2
   m_TagString: Boss
@@ -2243,110 +2541,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1465024517
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465024513}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.117939435, y: 0.09226054}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.44333333}
-    newSize: {x: 1, y: 0.44333333}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.053694114, y: 0.05136028}
-  m_EdgeRadius: 0
---- !u!61 &1465024518
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465024513}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.21929573, y: 0.043360308}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.44333333}
-    newSize: {x: 1, y: 0.44333333}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.05708024, y: 0.05069369}
-  m_EdgeRadius: 0
---- !u!61 &1465024519
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465024513}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.11647256, y: 0.09184786}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.44333333}
-    newSize: {x: 1, y: 0.44333333}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.041501373, y: 0.04257898}
-  m_EdgeRadius: 0
---- !u!61 &1465024520
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465024513}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.22876224, y: 0.026636286}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.44333333}
-    newSize: {x: 1, y: 0.44333333}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.044563755, y: 0.03746902}
-  m_EdgeRadius: 0
 --- !u!114 &1465024521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2364,32 +2558,6 @@ MonoBehaviour:
   item1: {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   item2: {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   item3: {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
---- !u!61 &1465024522
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465024513}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.001513483, y: -0.098412156}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.44333333}
-    newSize: {x: 1, y: 0.44333333}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.059074234, y: 0.05370161}
-  m_EdgeRadius: 0
 --- !u!1 &1614891772
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,7 +2728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c009c41e70347ad40b211d7e2804b495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armHealth: 0
+  bossPartHealth: 0
+  bossGameObject: {fileID: 0}
   pickups:
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
@@ -2646,6 +2815,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1812728504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812728505}
+  - component: {fileID: 1812728507}
+  - component: {fileID: 1812728506}
+  m_Layer: 0
+  m_Name: Boss TL Arm Hitbox
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1812728505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812728504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50.7, y: 29.7, z: 0}
+  m_LocalScale: {x: 200, y: 200, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1812728506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812728504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c009c41e70347ad40b211d7e2804b495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossPartHealth: 10
+  bossGameObject: {fileID: 1465024513}
+  pickups:
+  - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
+  - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
+  - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+--- !u!61 &1812728507
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812728504}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12145875, y: 0.092293516}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.06903444, y: 0.07732463}
+  m_EdgeRadius: 0
 --- !u!1 &1880502316
 GameObject:
   m_ObjectHideFlags: 0

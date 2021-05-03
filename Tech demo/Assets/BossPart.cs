@@ -4,28 +4,47 @@ using UnityEngine;
 
 public class BossPart : MonoBehaviour
 {
-    public float armHealth;
-    private Boss boss;
+    public float bossPartHealth;
     public GameObject[] pickups;
+    public bool hasPickups;
+
+    private Boss boss;
     private Transform Portal;
 
     void Start()
     {
-        boss = transform.parent.gameObject.GetComponent<Boss>();
-        armHealth = 10f;
+        boss = (Boss) GameObject.Find("ForestBoss2").GetComponent<Boss>();
         Portal = GameObject.Find("BeginPortal").transform;
     }
 
     public void TakeDamage(float damage)
     {
-        armHealth -= damage;
-        boss.TakeDamage(damage);
+        float damageToBoss = damage;
+
+        if((bossPartHealth - damage) < 0)
+        {
+            damageToBoss = damage + (bossPartHealth - damage);
+        }
+
+        if(bossPartHealth > 0)
+        bossPartHealth -= damage;
+
+        if(boss != null)
+        boss.TakeDamage(damageToBoss);
+
+        if (bossPartHealth <= 0)
+            Die();
     }
 
     void Die()
     {
-        int rand = Random.Range(0, 2);
-        Instantiate(pickups[rand], Portal.transform.position, Portal.transform.rotation);
+        if (hasPickups)
+        {
+            int rand = Random.Range(0, pickups.Length - 1);
+            Instantiate(pickups[rand], Portal.transform.position, Portal.transform.rotation);
+        }
+
+        Destroy(gameObject);
     }
 
 }

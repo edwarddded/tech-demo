@@ -5,11 +5,19 @@ using UnityEngine.UI;
 
 public class PlayerBossSkill : MonoBehaviour
 {
+    // Cooldown variables
     public Image imageCooldown;
-
     private bool isCooldown = false;
     private float cooldownDuration = 15f;
     private float cooldownTimer;
+
+    //Boss skill variables
+    public Transform firepoint;
+    private bool skillAvailable = true;
+    private int currentlySelectedSkill = 1;
+
+    //Boss skill prefabs
+    public GameObject ForestLaserArm; 
 
     void Start()
     {
@@ -51,12 +59,26 @@ public class PlayerBossSkill : MonoBehaviour
         {
             
         }
-        else
+        else if(skillAvailable)
         {
             isCooldown = true;
             cooldownTimer = cooldownDuration;
+            UseCurrentlySelectedSkill();
+        }
+    }
 
-            // Insert boss skill here
+    private void UseCurrentlySelectedSkill()
+    {
+        if(currentlySelectedSkill == 1)
+        {
+            if(firepoint.rotation.eulerAngles.y == 180)
+            {
+                Instantiate(ForestLaserArm, new Vector3(transform.position.x + 5, transform.position.y - 2, transform.position.z), firepoint.rotation);
+            }
+            else
+            {
+                Instantiate(ForestLaserArm, new Vector3(transform.position.x - 5, transform.position.y - 2, transform.position.z), firepoint.rotation);
+            }
 
         }
     }

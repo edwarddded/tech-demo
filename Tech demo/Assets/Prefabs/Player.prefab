@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 402161045117807077}
   - component: {fileID: 402161045117807072}
   - component: {fileID: 402161045117807079}
+  - component: {fileID: 1640369452273852425}
   - component: {fileID: 1813287749560532711}
   - component: {fileID: 3049106472315341637}
   - component: {fileID: 5763554479114835428}
@@ -239,6 +240,19 @@ MonoBehaviour:
     type: 3}
   mushroomBombPrefab: {fileID: 1054834782904023998, guid: a91ddaedb586ef44ebabd4e5abb5f6ca,
     type: 3}
+--- !u!114 &1640369452273852425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402161045117807080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4588d299ebe885d42b57002407dfb329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageCooldown: {fileID: 0}
 --- !u!114 &1813287749560532711
 MonoBehaviour:
   m_ObjectHideFlags: 0

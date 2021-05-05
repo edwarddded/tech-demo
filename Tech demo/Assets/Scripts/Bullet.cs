@@ -6,13 +6,23 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
     public Rigidbody2D rb;
-
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.right * speed;
+        if (speed >0)
+        {
+             StartCoroutine(destroy());
+        }
+       
+        
     }
-
+    IEnumerator destroy()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
+        //yield return new WaitForSeconds(2);
+    }
     // Update is called once per frame
     void Update()
     {

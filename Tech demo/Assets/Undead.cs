@@ -16,7 +16,7 @@ public class Undead : MonoBehaviour
     {
         transform.position = player.transform.position;
         ani.SetBool("CanSeePlayer", true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         ani.SetBool("CanSeePlayer", false);
     }
     // Update is called once per frame

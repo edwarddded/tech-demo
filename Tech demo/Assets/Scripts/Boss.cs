@@ -12,7 +12,7 @@ public class Boss : MonoBehaviour
     public GameObject item2;
     public GameObject item3;
 
- 
+    private PlayerBossSkill playerBossSkill;
 
     private BossHealthBar healthBar;
     // Start is called before the first frame update
@@ -23,6 +23,8 @@ public class Boss : MonoBehaviour
         BossHealth = 50f;
         healthBar = GameObject.Find("Healthbar").GetComponent<BossHealthBar>();
         healthBar.setMaxHealth(BossHealth);
+
+        playerBossSkill = GameObject.Find("Player").GetComponent<PlayerBossSkill>();
         
     }
     
@@ -54,7 +56,8 @@ public class Boss : MonoBehaviour
 
     void Die()
     {
-        //Instantiate(item, gameObject.transform.position, gameObject.transform.rotation);
+        playerBossSkill.skillAvailable = true;
+        playerBossSkill.hasForestSkill = true;
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         Destroy(sr);
         Ani.SetBool("dialoguePlay", true);

@@ -13,8 +13,14 @@ public class PlayerBossSkill : MonoBehaviour
 
     //Boss skill variables
     public Transform firepoint;
-    private bool skillAvailable = true;
+    public bool skillAvailable = false;
     private int currentlySelectedSkill = 1;
+    public bool hasForestSkill = false;
+    public bool hasFireSkill = false;
+    public bool hasIceSkill = false;
+
+    //Boss skill icons
+    public Image forestSkillImage;
 
     //Boss skill prefabs
     public GameObject ForestLaserArm; 
@@ -27,6 +33,8 @@ public class PlayerBossSkill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateIcon();
+
         if (Input.GetKeyDown(KeyCode.T))
         {
             UseAbility();
@@ -59,7 +67,7 @@ public class PlayerBossSkill : MonoBehaviour
         {
             
         }
-        else if(skillAvailable)
+        else if(skillAvailable && currentlySelectedSkill != 0)
         {
             isCooldown = true;
             cooldownTimer = cooldownDuration;
@@ -69,7 +77,7 @@ public class PlayerBossSkill : MonoBehaviour
 
     private void UseCurrentlySelectedSkill()
     {
-        if(currentlySelectedSkill == 1)
+        if(currentlySelectedSkill == 1 && hasForestSkill)
         {
             if(firepoint.rotation.eulerAngles.y == 180)
             {
@@ -79,6 +87,39 @@ public class PlayerBossSkill : MonoBehaviour
             {
                 Instantiate(ForestLaserArm, new Vector3(transform.position.x - 5, transform.position.y - 2, transform.position.z), firepoint.rotation);
             }
+
+        }
+
+        else if(currentlySelectedSkill == 2 && hasFireSkill)
+        {
+
+        }
+
+        else if(currentlySelectedSkill == 3 && hasIceSkill)
+        {
+
+        }
+
+    }
+
+    private void SwapActiveSkill()
+    {
+
+    }
+
+    private void UpdateIcon()
+    {
+        if(currentlySelectedSkill == 1 && hasForestSkill)
+        {
+            forestSkillImage.enabled = true;
+            // Disable the other two images
+        }
+        if(currentlySelectedSkill == 2 && hasFireSkill)
+        {
+
+        }
+        if(currentlySelectedSkill == 3 && hasIceSkill)
+        {
 
         }
     }

@@ -254,6 +254,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageCooldown: {fileID: 0}
   firepoint: {fileID: 402161043067415842}
+  skillAvailable: 0
+  hasForestSkill: 0
+  hasFireSkill: 0
+  hasIceSkill: 0
+  forestSkillImage: {fileID: 0}
   ForestLaserArm: {fileID: 9073841872258899808, guid: 9a6e3a3f6305ae54f807e996fa4bb88d,
     type: 3}
 --- !u!114 &1813287749560532711

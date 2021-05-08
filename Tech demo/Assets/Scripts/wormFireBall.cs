@@ -11,15 +11,6 @@ public class wormFireBall : MonoBehaviour
     {
         rb.velocity = transform.right * speed;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Health playerhealth = collision.GetComponent<Health>();
-        if (playerhealth != null)
-        {
-            playerhealth.health -= 1;
-            Destroy(gameObject);
-        }
-    }
 
     // Update is called once per frame
     void Update()

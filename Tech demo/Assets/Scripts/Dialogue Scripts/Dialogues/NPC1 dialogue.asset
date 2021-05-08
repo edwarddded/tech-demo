@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2ba59ca12024e57b90a6900697848c, type: 3}
+  m_Name: NPC1 dialogue
+  m_EditorClassIdentifier: 
+  dialogueinfo:
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 56797d92a285141598a68223d4cc0e9d, type: 3}
+    myText: Oh hello there... Whoa! why in such a rush?
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: b44165c78f7334324ba57d933d9eaa85, type: 3}
+    myText: Move out the way! I don't have time to waste.
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 6ab7b9d8218194f6cb759e4e34badda1, type: 3}
+    myText: Huh?! You've been gone for years and this is how you show up?!
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 6ab7b9d8218194f6cb759e4e34badda1, type: 3}
+    myText: all that time in seclusion must have driven you mad
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 080177359fa5a4c5a96656082b5380fb, type: 3}
+    myText: I need to go find them! I need to bring them back!
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 6ab7b9d8218194f6cb759e4e34badda1, type: 3}
+    myText: ah....I see...you're still hung up on that....
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 6ab7b9d8218194f6cb759e4e34badda1, type: 3}
+    myText: 'hah......... well, I won''t hold you back. Here are some tips since
+      it wont be easy out there:'
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 56797d92a285141598a68223d4cc0e9d, type: 3}
+    myText: Those things you picked up on your way to me, those are souls!
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 40b40646241594cff814bba014567bf9, type: 3}
+    myText: ( PRESS Q-W-E-R TO USE DIFFERENT SOUL ABILITIES)
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 56797d92a285141598a68223d4cc0e9d, type: 3}
+    myText: If you run out of souls to use, just collect more by defeating the enemies
+      you face!
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 3bf1cabcf0e55404ba1b4efa1cd9e888, type: 3}
+    myText: you can also use your own ability! You were always good at that trick
+      when we were young~
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 40b40646241594cff814bba014567bf9, type: 3}
+    myText: (PRESS A TO USE YOUR BASIC ATTACK)
+  - myName: Friend
+    portrait: {fileID: 21300000, guid: 3bf1cabcf0e55404ba1b4efa1cd9e888, type: 3}
+    myText: well.. I won't waste your time more...Good luck and be safe!
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 5974b36f0a73a4cbca2bcdb287a49b18, type: 3}
+    myText: Thank you.....Charlotte.

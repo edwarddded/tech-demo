@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
    
         dialogueBox.SetActive(true);
         thePlayer.canMove = false;
-        bossani.SetBool("dialoguePlay", true);
+//        bossani.SetBool("dialoguePlay", true);
         
         dialogueInfo.Clear();
         foreach (DialogueBase.Info info in db.dialogueinfo)
@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         thePlayer.canMove = true;
-        bossani.SetBool("dialoguePlay", false);
+//        bossani.SetBool("dialoguePlay", false);
 
     }
 }

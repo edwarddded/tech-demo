@@ -8,10 +8,18 @@ public class level : MonoBehaviour
 {
     // Start is called before the first frame update
    
-    public void Load()
+    public void Play()
     {
 
         SceneManager.LoadSceneAsync(1);
+    }
+    public void Options()
+    {
+
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
  
     

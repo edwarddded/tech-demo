@@ -21,32 +21,26 @@ public class MushroomBombBehaviour : MonoBehaviour
         Invoke("Explode", 2);
     }
 
-    /*
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
         Enemy enemy = collision.collider.GetComponent<Enemy>();
         if (enemy != null)
         {
-            projectileLives -= 1;
             enemy.TakeDamage(3f);
 
-            if (projectileLives <= 0)
-                Destroy(gameObject);
         }
         Boss boss = collision.collider.GetComponent<Boss>();
         if (boss != null)
         {
-            projectileLives -= 1;
             boss.TakeDamage(3f);
 
-            if (projectileLives <= 0)
-                Destroy(gameObject);
         }
-    } */
+    } 
 
     void Explode()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(this.transform.position, 2f);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(this.transform.position, 3f);
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].CompareTag("Enemy"))

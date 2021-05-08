@@ -12,6 +12,6 @@ public class GameOverButton : MonoBehaviour
     }
     public void PlayAgain()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }

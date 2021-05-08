@@ -3424,6 +3424,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1813287749560532711, guid: b17e9dc8951a1284fab21fefe4517fbd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b17e9dc8951a1284fab21fefe4517fbd, type: 3}
 --- !u!1 &1371618107
@@ -3457,6 +3462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: da0a680ae2e1b4500a7cc65a00d7e3dc, type: 2}
+  speechBubble: {fileID: 0}
 --- !u!61 &1371618109
 BoxCollider2D:
   m_ObjectHideFlags: 0

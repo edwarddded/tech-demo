@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1010919341802417413}
   - component: {fileID: 6682656194514217157}
   m_Layer: 0
-  m_Name: iceSoul
+  m_Name: blueEnemySoul
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,4 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699c98750db3dbf4ab40857017f88727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilityIcon: {fileID: 1514316577912267622, guid: f30a50667b9f6224eb5d9bdcd8d04e00,
+    type: 3}
   skillIndexNumber: 1

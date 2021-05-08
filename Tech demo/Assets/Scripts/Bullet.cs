@@ -10,8 +10,19 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
+        if (speed >0)
+        {
+             StartCoroutine(destroy());
+        }
+       
+        
     }
-
+    IEnumerator destroy()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
+        //yield return new WaitForSeconds(2);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +36,22 @@ public class Bullet : MonoBehaviour
         {
             enemy.TakeDamage(1f);
             Destroy(gameObject);
+        }
+
+        BossPart bossPart = col.GetComponent<BossPart>();
+        if (bossPart != null)
+        {
+            bossPart.TakeDamage(1f);
+            Destroy(gameObject);
+
+        }
+
+        Boss boss = col.GetComponent<Boss>();
+        if (boss != null)
+        {
+            boss.TakeDamage(1f);
+            Destroy(gameObject);
+
         }
 
     }

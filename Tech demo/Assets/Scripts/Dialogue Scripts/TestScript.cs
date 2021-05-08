@@ -18,6 +18,7 @@ public class TestScript : MonoBehaviour
             TriggerDialogue();
             Object.Destroy(gameObject);
         }
+      
     }
 }
 

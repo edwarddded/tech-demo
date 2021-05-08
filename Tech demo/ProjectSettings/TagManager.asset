@@ -9,6 +9,12 @@ TagManager:
   - Enemy
   - thorn
   - swamp
+  - turn
+  - protal
+  - forestbossPortal
+  - Boss
+  - Laser
+  - Climbable
   layers:
   - Default
   - TransparentFX
@@ -19,8 +25,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Player
+  - Climbable
   - 
   - 
   - 

@@ -17,11 +17,11 @@ public class level : MonoBehaviour
     {
 
     }
-    public void QuitGame()
+    public void OnApplicationQuit()
     {
         Application.Quit();
+        Debug.Log("Quit Game");
     }
- 
-    
+
 }
 

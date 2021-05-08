@@ -75,24 +75,42 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health > 4)
+        {
+            health = 4;
+        }
+
         if (health == 0)
         {
             SceneManager.LoadScene(5);
             Destroy(gameObject);
         }
+        else if(health == 4)
+        {
+            fullHearts1.gameObject.SetActive(true);
+            fullhearts2.gameObject.SetActive(true);
+            fullhearts3.gameObject.SetActive(true);
+            fullhearts4.gameObject.SetActive(true);
+        }
         else if (health == 3)
         {
+            fullHearts1.gameObject.SetActive(true);
+            fullhearts2.gameObject.SetActive(true);
+            fullhearts3.gameObject.SetActive(true);
             fullhearts4.gameObject.SetActive(false);
         }
         else if (health == 2)
         {
-            fullhearts4.gameObject.SetActive(false);
+            fullHearts1.gameObject.SetActive(true);
+            fullhearts2.gameObject.SetActive(true);
             fullhearts3.gameObject.SetActive(false);
+            fullhearts4.gameObject.SetActive(false);
         }
         else if (health ==1)
         {
-            fullhearts3.gameObject.SetActive(false);
+            fullHearts1.gameObject.SetActive(true);
             fullhearts2.gameObject.SetActive(false);
+            fullhearts3.gameObject.SetActive(false);
             fullhearts4.gameObject.SetActive(false);
         }else if (health ==0)
         {
@@ -100,6 +118,15 @@ public class Health : MonoBehaviour
             fullhearts3.gameObject.SetActive(false);
             fullhearts2.gameObject.SetActive(false);
             fullhearts4.gameObject.SetActive(false);
+        }
+    }
+
+    public void RestoreHealth(int healAmount)
+    {
+        health += healAmount;
+        if(health > 4)
+        {
+            health = 4;
         }
     }
 }

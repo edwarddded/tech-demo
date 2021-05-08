@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 9028337485217874306}
   - component: {fileID: 9028337485217874307}
   - component: {fileID: 9028337485217874317}
+  - component: {fileID: 4100387127866432000}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -147,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 9028337485217874311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.77, y: 0.98, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 12}
+  m_LocalScale: {x: 8, y: 8, z: 12}
   m_Children:
   - {fileID: 9028337484964840170}
   - {fileID: 9028337484603861499}
@@ -255,10 +256,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.061699808, y: -0.05352032}
+  m_Offset: {x: -0.061699808, y: -0.014484167}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -269,7 +270,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23398241, y: 0.5310234}
+  m_Size: {x: 0.23398241, y: 0.45295107}
   m_EdgeRadius: 0
 --- !u!114 &9028337485217874317
 MonoBehaviour:
@@ -291,3 +292,29 @@ MonoBehaviour:
   Sightendpos: {fileID: 9028337484603861499}
   spotted: 0
   enemyright: 1
+--- !u!61 &4100387127866432000
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9028337485217874311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.027882963, y: -0.2816433}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36, y: 0.64}
+    newSize: {x: 0.18, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3042341, y: 0.0768134}
+  m_EdgeRadius: 0

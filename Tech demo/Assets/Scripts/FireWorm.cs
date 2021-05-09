@@ -7,10 +7,11 @@ public class FireWorm : MonoBehaviour
     public Transform firepoint;
     public GameObject fireball;
     int i = 2;
+ 
     // Start is called before the first frame update
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame
@@ -27,9 +28,9 @@ public class FireWorm : MonoBehaviour
         }
         bool canseeplayer = gameObject.GetComponent<Enemy>().spotted;
         if (canseeplayer == true)
-        {   
-           
-            if (Time.time >i)
+        {
+
+            if (Time.time > i)
             {
                 i += 3;
                 shoot();
@@ -38,10 +39,6 @@ public class FireWorm : MonoBehaviour
     }
     void shoot()
     {
-        
         Instantiate(fireball, firepoint.position, firepoint.rotation);
-        
     }
-        
-    
 }

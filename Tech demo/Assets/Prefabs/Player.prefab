@@ -240,6 +240,8 @@ MonoBehaviour:
     type: 3}
   mushroomBombPrefab: {fileID: 1054834782904023998, guid: a91ddaedb586ef44ebabd4e5abb5f6ca,
     type: 3}
+  goblinDaggerPrefab: {fileID: 5996693015966046398, guid: 07e01406fedba6548aceab4b6d072582,
+    type: 3}
 --- !u!114 &1640369452273852425
 MonoBehaviour:
   m_ObjectHideFlags: 0

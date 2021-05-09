@@ -2554,11 +2554,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f1b5011ae950741b911ba368182e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BossHealth: 50
+  BossHealth: 2
   Ani: {fileID: 1465024514}
   item1: {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   item2: {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   item3: {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+  FirePortal: {fileID: 0}
 --- !u!1 &1614891772
 GameObject:
   m_ObjectHideFlags: 0

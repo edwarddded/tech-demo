@@ -11,6 +11,7 @@ public class Boss : MonoBehaviour
     public GameObject item1;
     public GameObject item2;
     public GameObject item3;
+    public GameObject FirePortal;
 
     private PlayerBossSkill playerBossSkill;
     private bool playcanmove;
@@ -25,8 +26,7 @@ public class Boss : MonoBehaviour
         healthBar.setMaxHealth(BossHealth);
 
         playerBossSkill = GameObject.Find("Player").GetComponent<PlayerBossSkill>();
-        //playcanmove = GameObject.Find("Player").GetComponent<PlayerController>().canMove;
-        //Debug.Log(playcanmove);
+
     }
     
     
@@ -62,6 +62,8 @@ public class Boss : MonoBehaviour
         playerBossSkill.hasForestSkill = true;
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         Destroy(sr);
+        Vector3 fireposition = new Vector3(-20, 20.35f, 0);
+        Instantiate(FirePortal, fireposition, Portal.transform.rotation);
         Ani.SetBool("dialoguePlay", true);
     }
     void SetAttackAnimation()
@@ -87,13 +89,6 @@ public class Boss : MonoBehaviour
     {
             
         SetAttackAnimation();
-        //if (playcanmove)
-        //{
-        //    Ani.SetBool("dialoguePlay", true);
-        //}
-        //else
-        //{
-        //    Ani.SetBool("dialoguePlay", false);
-        //}
+
     }
 }

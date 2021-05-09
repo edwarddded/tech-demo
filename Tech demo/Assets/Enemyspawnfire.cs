@@ -12,7 +12,7 @@ public class Enemyspawnfire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int random = Random.Range(1, 4);
+        int random = Random.Range(1, 3);
         float randx = Random.Range(MiniX, MaxX);
         Debug.Log(random);
         whereToSpawn = new Vector2(randx, transform.position.y);

@@ -10,6 +10,7 @@ public class PlayerSkillDictionary : MonoBehaviour
     public GameObject combustPrefab;
     public GameObject flyingEyeSummonPrefab;
     public GameObject mushroomBombPrefab;
+    public GameObject goblinDaggerPrefab;
 
     void Start()
     {
@@ -31,6 +32,8 @@ public class PlayerSkillDictionary : MonoBehaviour
             FlyingEyeSummon();
         if (abilityIndex == 4)
             MushroomBomb();
+        if (abilityIndex == 5)
+            StartCoroutine("GoblinDaggerFan");
     }
 
     //Below is the collection of all the player skills
@@ -74,5 +77,25 @@ public class PlayerSkillDictionary : MonoBehaviour
     {
         Debug.Log("Ability 4 Mushroom Bomb Activated");
         Instantiate(mushroomBombPrefab, firepoint.position, firepoint.rotation);
+    }
+
+    IEnumerator GoblinDaggerFan()
+    {
+        var rotation = firepoint.rotation;
+        Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation);
+        yield return new WaitForSeconds(0.15f);
+        Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 45));
+        yield return new WaitForSeconds(0.15f);
+        Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 90));
+        yield return new WaitForSeconds(0.15f);
+        Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 135));
+        yield return new WaitForSeconds(0.15f);
+        Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 180));
+        yield return new WaitForSeconds(0.15f);
+        Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 225));
+        yield return new WaitForSeconds(0.15f);
+        Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 270));
+        yield return new WaitForSeconds(0.15f);
+        Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 315));
     }
 }

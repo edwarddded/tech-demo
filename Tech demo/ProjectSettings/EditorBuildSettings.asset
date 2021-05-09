@@ -26,4 +26,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start & Game over/GameOver.unity
     guid: cecb451de3aa4c54a877e02e26bf1e06
+  - enabled: 1
+    path: Assets/Scenes/Fire Room/Fire-Room1.unity
+    guid: ba71480f2bc53ec4689837d1607661dc
+  - enabled: 1
+    path: Assets/Scenes/Fire Room/Fire-Room2.unity
+    guid: c202d188ff5c72e48aed49627c18a18f
+  - enabled: 1
+    path: Assets/Scenes/Fire Room/Fire-Room3.unity
+    guid: 74fc1225492e23841856d96aea6e3da2
+  - enabled: 1
+    path: Assets/Scenes/Fire Room/Fire-Boss.unity
+    guid: c17c582f6a5ff3c46b5cf0b2f9727816
   m_configObjects: {}

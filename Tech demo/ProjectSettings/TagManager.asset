@@ -15,6 +15,7 @@ TagManager:
   - Boss
   - Laser
   - Climbable
+  - firebossProtal
   layers:
   - Default
   - TransparentFX

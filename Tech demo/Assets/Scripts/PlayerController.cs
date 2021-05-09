@@ -77,6 +77,11 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.position = new Vector2(-23.8f, 28);
             vcam.m_Lens.OrthographicSize = 28f;
         }
+        if (collision.gameObject.tag == "firebossProtal")
+        {
+            SceneManager.LoadScene(10);
+            gameObject.transform.position = new Vector2(-22.4f, -11);
+        }
     }
 
     // Update is called once per frame

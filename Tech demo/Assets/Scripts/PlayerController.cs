@@ -62,18 +62,18 @@ public class PlayerController : MonoBehaviour
             int rand = Random.Range(1, 3);
             if (rand ==1)
             {
-                SceneManager.LoadScene(2);
-                gameObject.transform.position = new Vector2(-26.6f, 1);
+                SceneManager.LoadScene(3);
+                gameObject.transform.position = new Vector2(-26.6f, 10);
             }
             else
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(4);
                 gameObject.transform.position = new Vector2(-60f, 10);
             }
         }
         if (collision.gameObject.tag == "forestbossPortal")
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
             gameObject.transform.position = new Vector2(-23.8f, 28);
             vcam.m_Lens.OrthographicSize = 28f;
         }
@@ -87,6 +87,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             AnimatorOfCharacter.SetBool("hasStopped", true);
             return;
+            
         }
         else
         {

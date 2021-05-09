@@ -166,11 +166,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossPartHealth: 10
-  bossGameObject: {fileID: 1465024513}
   pickups:
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+  hasPickups: 0
 --- !u!61 &41168399
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -786,11 +786,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossPartHealth: 0
-  bossGameObject: {fileID: 0}
   pickups:
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+  hasPickups: 0
 --- !u!1 &341531802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 5b91ef9c9b4fc4e3298432703b8835a7, type: 2}
+  speechBubble: {fileID: 0}
 --- !u!4 &718351240
 Transform:
   m_ObjectHideFlags: 0
@@ -1549,11 +1550,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossPartHealth: 10
-  bossGameObject: {fileID: 1465024513}
   pickups:
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+  hasPickups: 0
 --- !u!61 &806853342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1625,8 +1626,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossPartHealth: 20
-  bossGameObject: {fileID: 1465024513}
   pickups: []
+  hasPickups: 0
 --- !u!61 &841372715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1924,11 +1925,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossPartHealth: 0
-  bossGameObject: {fileID: 0}
   pickups:
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+  hasPickups: 0
 --- !u!1 &981179422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,11 +2405,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossPartHealth: 10
-  bossGameObject: {fileID: 1465024513}
   pickups:
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+  hasPickups: 0
 --- !u!61 &1345095212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2729,11 +2730,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossPartHealth: 0
-  bossGameObject: {fileID: 0}
   pickups:
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+  hasPickups: 0
 --- !u!1 &1706929763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,11 +2861,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossPartHealth: 10
-  bossGameObject: {fileID: 1465024513}
   pickups:
   - {fileID: 8557235892768744330, guid: 1e2717539ab4ea147b6f1b83ae609fc2, type: 3}
   - {fileID: 5603242894918836691, guid: c7e135cfaa3f8704bb9b8fce90334612, type: 3}
   - {fileID: 4718934538870756833, guid: 2cbacd438d0916c4d90c24ab29106cb7, type: 3}
+  hasPickups: 0
 --- !u!61 &1812728507
 BoxCollider2D:
   m_ObjectHideFlags: 0

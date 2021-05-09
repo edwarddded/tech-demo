@@ -82,7 +82,7 @@ public class Health : MonoBehaviour
 
         if (health == 0)
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
             Destroy(gameObject);
         }
         else if(health == 4)

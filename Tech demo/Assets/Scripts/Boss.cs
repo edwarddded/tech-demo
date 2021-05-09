@@ -13,7 +13,7 @@ public class Boss : MonoBehaviour
     public GameObject item3;
 
     private PlayerBossSkill playerBossSkill;
-
+    private bool playcanmove;
     private BossHealthBar healthBar;
     // Start is called before the first frame update
     void Start()
@@ -25,8 +25,10 @@ public class Boss : MonoBehaviour
         healthBar.setMaxHealth(BossHealth);
 
         playerBossSkill = GameObject.Find("Player").GetComponent<PlayerBossSkill>();
-        
+        //playcanmove = GameObject.Find("Player").GetComponent<PlayerController>().canMove;
+        //Debug.Log(playcanmove);
     }
+    
     
     public void TakeDamage(float damage)
     {
@@ -85,5 +87,13 @@ public class Boss : MonoBehaviour
     {
             
         SetAttackAnimation();
+        //if (playcanmove)
+        //{
+        //    Ani.SetBool("dialoguePlay", true);
+        //}
+        //else
+        //{
+        //    Ani.SetBool("dialoguePlay", false);
+        //}
     }
 }

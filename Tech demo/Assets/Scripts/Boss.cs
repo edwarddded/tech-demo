@@ -5,7 +5,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     public float BossHealth;
-    private float time = 8f;
+    private float time = 20f;
     public Animator Ani;
     private Transform Portal;
     public GameObject item1;
@@ -73,7 +73,7 @@ public class Boss : MonoBehaviour
         //Debug.Log(time);
         if (time < 0)
         {
-            time = 8f;
+            time = 20f;
         }
         if (time < 2.5)
         {

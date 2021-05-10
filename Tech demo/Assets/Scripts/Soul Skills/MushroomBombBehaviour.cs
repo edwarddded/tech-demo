@@ -5,10 +5,11 @@ using UnityEngine;
 public class MushroomBombBehaviour : MonoBehaviour
 {
 
-    public float speed = 4;
+    public float speed = 7f;
     public Vector3 LaunchOffset;
     public bool Thrown;
     public GameObject explosionEffect;
+    public GameObject miniMushrooomBombPrefab;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class MushroomBombBehaviour : MonoBehaviour
             var direction = transform.right + Vector3.up;
             GetComponent<Rigidbody2D>().AddForce(direction * speed, ForceMode2D.Impulse);
         }
-        transform.Translate(LaunchOffset);
+        //transform.Translate(LaunchOffset);
         Invoke("Explode", 2);
     }
 
@@ -36,11 +37,17 @@ public class MushroomBombBehaviour : MonoBehaviour
             boss.TakeDamage(3f);
 
         }
+        BossPart bossPart = collision.collider.GetComponent<BossPart>();
+        if (bossPart != null)
+        {
+            bossPart.TakeDamage(3f);
+
+        }
     } 
 
     void Explode()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(this.transform.position, 3f);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(this.transform.position, 2f);
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].CompareTag("Enemy"))
@@ -68,6 +75,14 @@ public class MushroomBombBehaviour : MonoBehaviour
         }
 
         Instantiate(explosionEffect, this.transform.position, this.transform.rotation);
+        Instantiate(miniMushrooomBombPrefab, this.transform.position, this.transform.rotation);
+        Instantiate(miniMushrooomBombPrefab, this.transform.position, this.transform.rotation * Quaternion.Euler(0, 0, 45));
+        Instantiate(miniMushrooomBombPrefab, this.transform.position, this.transform.rotation * Quaternion.Euler(0, 0, 90));
+        Instantiate(miniMushrooomBombPrefab, this.transform.position, this.transform.rotation * Quaternion.Euler(0, 0, 135));
+        Instantiate(miniMushrooomBombPrefab, this.transform.position, this.transform.rotation * Quaternion.Euler(0, 0, 180));
+        Instantiate(miniMushrooomBombPrefab, this.transform.position, this.transform.rotation * Quaternion.Euler(0, 0, 225));
+        Instantiate(miniMushrooomBombPrefab, this.transform.position, this.transform.rotation * Quaternion.Euler(0, 0, 270));
+        Instantiate(miniMushrooomBombPrefab, this.transform.position, this.transform.rotation * Quaternion.Euler(0, 0, 315));
 
         Destroy(gameObject);
     }

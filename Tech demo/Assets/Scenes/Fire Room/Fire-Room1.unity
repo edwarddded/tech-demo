@@ -1631,7 +1631,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.4912986, y: 0.3552845}
+  - {x: -4.1702404, y: 0.38353524}
+  - {x: -2.3843691, y: 0.3934161}
+  - {x: -1.9714267, y: 0.3973323}
   - {x: 1.4955727, y: 0.36812302}
 --- !u!212 &460106288
 SpriteRenderer:
@@ -7096,7 +7098,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1977183649}
   - component: {fileID: 1977183648}
-  - component: {fileID: 1977183647}
   m_Layer: 8
   m_Name: platform12
   m_TagString: Untagged
@@ -7104,24 +7105,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!68 &1977183647
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1977183646}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -1.4680351, y: 0.36966175}
-  - {x: 1.4513004, y: 0.3597565}
 --- !u!212 &1977183648
 SpriteRenderer:
   m_ObjectHideFlags: 0

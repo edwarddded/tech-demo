@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
         BossPart bossPart = col.GetComponent<BossPart>();
         if (bossPart != null)
         {
-            bossPart.TakeDamage(1f);
+            bossPart.TakeDamage(2f);
             Destroy(gameObject);
 
         }
@@ -49,9 +49,14 @@ public class Bullet : MonoBehaviour
         Boss boss = col.GetComponent<Boss>();
         if (boss != null)
         {
-            boss.TakeDamage(1f);
+            boss.TakeDamage(2f);
             Destroy(gameObject);
+        }
 
+        FireBoss fireboss = col.GetComponent<FireBoss>();
+        if (fireboss != null)
+        {
+            fireboss.TakeDamage(2f);
         }
 
     }

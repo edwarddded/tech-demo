@@ -13,9 +13,10 @@ public class FireBallShoot : MonoBehaviour
     }
     void shoot()
     {
-        
         Instantiate(fireball, transform.position, transform.rotation);
+        
     }
+    
     // Update is called once per frame
     void Update()
     {

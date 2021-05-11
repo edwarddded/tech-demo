@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlyingEyeSummonBehaviour : MonoBehaviour
 {
-    public float Speed = 10f;
+    public float Speed = 13f;
     public Vector3 LaunchOffset;
     private Health health;
 
@@ -25,30 +25,35 @@ public class FlyingEyeSummonBehaviour : MonoBehaviour
         {
             enemy.TakeDamage(3f);
             health.RestoreHealth(3);
+            Destroy(gameObject);
         }
         Boss boss = col.GetComponent<Boss>();
         if (boss != null)
         {
             boss.TakeDamage(3f);
             health.RestoreHealth(3);
+            Destroy(gameObject);
         }
         BossPart bossPart = col.GetComponent<BossPart>();
         if (bossPart != null)
         {
-            boss.TakeDamage(3f);
+            bossPart.TakeDamage(3f);
             health.RestoreHealth(3);
+            Destroy(gameObject);
         }
         FireBoss fireboss = col.GetComponent<FireBoss>();
         if (fireboss != null)
         {
             fireboss.TakeDamage(2f);
             health.RestoreHealth(3);
+            Destroy(gameObject);
         }
         Wizard wizard = col.GetComponent<Wizard>();
         if (wizard != null)
         {
             wizard.TakeDamage(2f);
             health.RestoreHealth(3);
+            Destroy(gameObject);
         }
     }
 

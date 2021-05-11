@@ -5,6 +5,7 @@ using UnityEngine;
 public class TestScript : MonoBehaviour
 {
     public DialogueBase dialogue;
+    public GameObject speechBubble;
 
     public void TriggerDialogue()
     {
@@ -17,7 +18,9 @@ public class TestScript : MonoBehaviour
         {
             TriggerDialogue();
             Object.Destroy(gameObject);
+            Object.Destroy(speechBubble);
         }
+      
     }
 }
 

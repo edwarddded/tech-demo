@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3237152519127631606}
   - component: {fileID: 7122277340780583881}
   - component: {fileID: 224910075867832310}
+  - component: {fileID: 8621337562941010866}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Fire
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2561345123817650640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.08, y: -2.6369, z: -1.4169922}
-  m_LocalScale: {x: 0.5, y: 0.30610728, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,13 +74,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1942777921290549423, guid: 274d64617113287499ed1c4165d1d8f3,
+  m_Sprite: {fileID: -621281299814920058, guid: ef46eed7ddbb47c4fadf27952bfb639b,
     type: 3}
-  m_Color: {r: 0.5660378, g: 0.06674973, b: 0.06674973, a: 1}
+  m_Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 51.2, y: 48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -136,3 +137,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: 3237152519127631606}
+--- !u!95 &8621337562941010866
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561345123817650640}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 223ebb5fa799535429e3a56a8c9dcbe9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

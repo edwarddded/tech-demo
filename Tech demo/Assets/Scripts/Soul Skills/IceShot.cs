@@ -12,6 +12,7 @@ public class IceShot : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
+        Destroy(gameObject, 3);
     }
 
     // Update is called once per frame
@@ -31,6 +32,35 @@ public class IceShot : MonoBehaviour
             if(projectileLives <= 0)
             Destroy(gameObject);
         }
+        Boss boss = col.GetComponent<Boss>();
+        if (boss != null)
+        {
+            projectileLives -= 1;
+            boss.TakeDamage(3f);
 
+            if (projectileLives <= 0)
+                Destroy(gameObject);
+        }
+        BossPart bossPart = col.GetComponent<BossPart>();
+        if (bossPart != null)
+        {
+            projectileLives -= 1;
+            boss.TakeDamage(3f);
+
+            if (projectileLives <= 0)
+                Destroy(gameObject);
+        }
+        FireBoss fireboss = col.GetComponent<FireBoss>();
+        if (fireboss != null)
+        {
+            fireboss.TakeDamage(2f);
+
+        }
+        Wizard wizard = col.GetComponent<Wizard>();
+        if (wizard != null)
+        {
+            wizard.TakeDamage(2f);
+
+        }
     }
 }

@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
+    private Animator bossani;
+    private GameObject Boss;
     private void Awake()
     {
         if (instance != null)
@@ -16,20 +19,43 @@ public class DialogueManager : MonoBehaviour
             instance = this;
         }
     }
+    private void Start()
+    {
+        thePlayer = FindObjectOfType<PlayerController>();
+        
+    }
 
     public GameObject dialogueBox;
     public Text dialogueName;
     public Text dialogueText;
     public Image dialoguePortrait;
     public float delay = 0.001f;
-    private bool isCurrentlyTyping;
+    public bool isCurrentlyTyping;
     private string completeText;
+    private PlayerController thePlayer;
+ 
+
 
     public Queue<DialogueBase.Info> dialogueInfo = new Queue<DialogueBase.Info>();
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Boss1")
+        {   
+            bossani = GameObject.Find("ForestBoss2").GetComponent<Animator>();
+        }
+    }
 
     public void EnqueueDialogue (DialogueBase db)
     {
+   
         dialogueBox.SetActive(true);
+        thePlayer.canMove = false;
+        if (bossani != null)
+        {
+            bossani.SetBool("dialoguePlay", true);
+        }
+        
+
         dialogueInfo.Clear();
         foreach (DialogueBase.Info info in db.dialogueinfo)
         {
@@ -81,5 +107,12 @@ public class DialogueManager : MonoBehaviour
     public void endOfDialogue()
     {
         dialogueBox.SetActive(false);
+        thePlayer.canMove = true;
+        if (bossani != null)
+        {
+            bossani.SetBool("dialoguePlay", false);
+        }
+ 
+
     }
 }

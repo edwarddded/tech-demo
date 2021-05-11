@@ -242,6 +242,8 @@ MonoBehaviour:
     type: 3}
   goblinDaggerPrefab: {fileID: 5996693015966046398, guid: 07e01406fedba6548aceab4b6d072582,
     type: 3}
+  greenFireballPrefab: {fileID: 5285658137388250304, guid: b50e13200fb4a4d4a84a18af131358f1,
+    type: 3}
 --- !u!114 &1640369452273852425
 MonoBehaviour:
   m_ObjectHideFlags: 0

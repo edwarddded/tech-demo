@@ -11,6 +11,7 @@ public class PlayerSkillDictionary : MonoBehaviour
     public GameObject flyingEyeSummonPrefab;
     public GameObject mushroomBombPrefab;
     public GameObject goblinDaggerPrefab;
+    public GameObject greenFireballPrefab;
 
     void Start()
     {
@@ -34,6 +35,8 @@ public class PlayerSkillDictionary : MonoBehaviour
             MushroomBomb();
         if (abilityIndex == 5)
             StartCoroutine("GoblinDaggerFan");
+        if (abilityIndex == 6)
+            StartCoroutine("FireballSpread");
     }
 
     //Below is the collection of all the player skills
@@ -81,7 +84,6 @@ public class PlayerSkillDictionary : MonoBehaviour
 
     IEnumerator GoblinDaggerFan()
     {
-        var rotation = firepoint.rotation;
         Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation);
         yield return new WaitForSeconds(0.15f);
         Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 45));
@@ -97,5 +99,18 @@ public class PlayerSkillDictionary : MonoBehaviour
         Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 270));
         yield return new WaitForSeconds(0.15f);
         Instantiate(goblinDaggerPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 315));
+    }
+
+    IEnumerator FireballSpread()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Instantiate(greenFireballPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 40));
+            Instantiate(greenFireballPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 20));
+            Instantiate(greenFireballPrefab, firepoint.position, firepoint.rotation);
+            Instantiate(greenFireballPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 340));
+            Instantiate(greenFireballPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 320));
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }

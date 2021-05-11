@@ -50,5 +50,17 @@ public class IceShot : MonoBehaviour
             if (projectileLives <= 0)
                 Destroy(gameObject);
         }
+        FireBoss fireboss = col.GetComponent<FireBoss>();
+        if (fireboss != null)
+        {
+            fireboss.TakeDamage(2f);
+
+        }
+        Wizard wizard = col.GetComponent<Wizard>();
+        if (wizard != null)
+        {
+            wizard.TakeDamage(2f);
+
+        }
     }
 }

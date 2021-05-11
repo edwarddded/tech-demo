@@ -38,6 +38,18 @@ public class FlyingEyeSummonBehaviour : MonoBehaviour
             boss.TakeDamage(3f);
             health.RestoreHealth(3);
         }
+        FireBoss fireboss = col.GetComponent<FireBoss>();
+        if (fireboss != null)
+        {
+            fireboss.TakeDamage(2f);
+            health.RestoreHealth(3);
+        }
+        Wizard wizard = col.GetComponent<Wizard>();
+        if (wizard != null)
+        {
+            wizard.TakeDamage(2f);
+            health.RestoreHealth(3);
+        }
     }
 
 }

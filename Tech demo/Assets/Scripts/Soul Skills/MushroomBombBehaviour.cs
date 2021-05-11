@@ -43,6 +43,18 @@ public class MushroomBombBehaviour : MonoBehaviour
             bossPart.TakeDamage(3f);
 
         }
+        FireBoss fireboss = collision.collider.GetComponent<FireBoss>();
+        if (fireboss != null)
+        {
+            fireboss.TakeDamage(3f); 
+        }
+        Wizard wizard = collision.collider.GetComponent<Wizard>();
+        if (wizard != null)
+        {
+            wizard.TakeDamage(3f);
+            
+
+        }
     } 
 
     void Explode()
@@ -57,6 +69,11 @@ public class MushroomBombBehaviour : MonoBehaviour
                 {
                     enemy.TakeDamage(3f);
                 }
+                Wizard wizard = colliders[i].gameObject.GetComponent<Wizard>();
+                if (wizard != null)
+                {
+                    wizard.TakeDamage(3f);
+                }
             }
             if (colliders[i].CompareTag("Boss"))
             {
@@ -69,6 +86,11 @@ public class MushroomBombBehaviour : MonoBehaviour
                 if (bossPart != null)
                 {
                     bossPart.TakeDamage(3f);
+                }
+                FireBoss fireboss = colliders[i].gameObject.GetComponent<FireBoss>();
+                if (fireboss != null)
+                {
+                    fireboss.TakeDamage(3f);
                 }
             }
 

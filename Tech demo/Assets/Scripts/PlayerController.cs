@@ -77,6 +77,20 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.position = new Vector2(-23.8f, 28);
             vcam.m_Lens.OrthographicSize = 28f;
         }
+        if (collision.gameObject.tag == "FirePortal")
+        {
+            int rand = Random.Range(1, 3);
+            if (rand == 1)
+            {
+                SceneManager.LoadScene(8);
+                gameObject.transform.position = new Vector2(-4.5f, 10f);
+            }
+            else
+            {
+                SceneManager.LoadScene(9);
+                gameObject.transform.position = new Vector2(-1.5f, -8.3f);
+            }
+        }
         if (collision.gameObject.tag == "firebossProtal")
         {
             SceneManager.LoadScene(10);

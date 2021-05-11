@@ -45,6 +45,19 @@ public class GoblinDaggerBehaviour : MonoBehaviour
             Destroy(gameObject);
 
         }
+        FireBoss fireboss = col.GetComponent<FireBoss>();
+        if (fireboss != null)
+        {
+            fireboss.TakeDamage(2f);
+            Destroy(gameObject);
+        }
+        Wizard wizard = col.GetComponent<Wizard>();
+        if (wizard != null)
+        {
+            wizard.TakeDamage(2f);
+            Destroy(gameObject);
+        }
+
 
     }
 }

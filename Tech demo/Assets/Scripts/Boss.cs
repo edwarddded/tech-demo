@@ -62,8 +62,8 @@ public class Boss : MonoBehaviour
         playerBossSkill.hasForestSkill = true;
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         Destroy(sr);
-        Vector3 fireposition = new Vector3(-20, 20.35f, 0);
-        Instantiate(FirePortal, fireposition, Portal.transform.rotation);
+        //Vector3 fireposition = new Vector3(-20, 20.35f, 0);
+        //Instantiate(FirePortal, fireposition, Portal.transform.rotation);
         Ani.SetBool("dialoguePlay", true);
     }
     void SetAttackAnimation()

@@ -58,6 +58,11 @@ public class Bullet : MonoBehaviour
         {
             fireboss.TakeDamage(2f);
         }
+        Wizard wizard = col.GetComponent<Wizard>();
+        if (wizard != null)
+        {
+            wizard.TakeDamage(2f);
+        }
 
     }
 }

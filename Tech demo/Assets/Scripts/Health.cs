@@ -101,7 +101,7 @@ public class Health : MonoBehaviour
         }
         else if (health == 2)
         {
-            fullHearts1.gameObject.SetActive(true);
+            //fullHearts1.gameObject.SetActive(true);
             fullhearts2.gameObject.SetActive(true);
             fullhearts3.gameObject.SetActive(false);
             fullhearts4.gameObject.SetActive(false);

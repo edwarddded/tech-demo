@@ -244,6 +244,8 @@ MonoBehaviour:
     type: 3}
   greenFireballPrefab: {fileID: 5285658137388250304, guid: b50e13200fb4a4d4a84a18af131358f1,
     type: 3}
+  skeletonGuardianPrefab: {fileID: 2328940819077564650, guid: 3f07dcfcb0c3c79458141216066e8c6f,
+    type: 3}
 --- !u!114 &1640369452273852425
 MonoBehaviour:
   m_ObjectHideFlags: 0

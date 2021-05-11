@@ -12,6 +12,7 @@ public class PlayerSkillDictionary : MonoBehaviour
     public GameObject mushroomBombPrefab;
     public GameObject goblinDaggerPrefab;
     public GameObject greenFireballPrefab;
+    public GameObject skeletonGuardianPrefab;
 
     void Start()
     {
@@ -37,6 +38,8 @@ public class PlayerSkillDictionary : MonoBehaviour
             StartCoroutine("GoblinDaggerFan");
         if (abilityIndex == 6)
             StartCoroutine("FireballSpread");
+        if (abilityIndex == 7)
+            SkeletonGuardian();
     }
 
     //Below is the collection of all the player skills
@@ -112,5 +115,11 @@ public class PlayerSkillDictionary : MonoBehaviour
             Instantiate(greenFireballPrefab, firepoint.position, firepoint.rotation * Quaternion.Euler(0, 0, 320));
             yield return new WaitForSeconds(0.5f);
         }
+    }
+
+    void SkeletonGuardian()
+    {
+        var skeletonGuardian = Instantiate(skeletonGuardianPrefab, firepoint.position + new Vector3(0, 2.2f, 0), firepoint.rotation);
+        skeletonGuardian.transform.parent = gameObject.transform;
     }
 }

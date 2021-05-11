@@ -13,6 +13,7 @@ public class PlayerSkillDictionary : MonoBehaviour
     public GameObject goblinDaggerPrefab;
     public GameObject greenFireballPrefab;
     public GameObject skeletonGuardianPrefab;
+    public GameObject fireColumnPrefab;
 
     void Start()
     {
@@ -40,6 +41,8 @@ public class PlayerSkillDictionary : MonoBehaviour
             StartCoroutine("FireballSpread");
         if (abilityIndex == 7)
             SkeletonGuardian();
+        if (abilityIndex == 8)
+            StartCoroutine(FireColumn());
     }
 
     //Below is the collection of all the player skills
@@ -121,5 +124,24 @@ public class PlayerSkillDictionary : MonoBehaviour
     {
         var skeletonGuardian = Instantiate(skeletonGuardianPrefab, firepoint.position + new Vector3(0, 2.2f, 0), firepoint.rotation);
         skeletonGuardian.transform.parent = gameObject.transform;
+    }
+
+    IEnumerator FireColumn()
+    {
+        var columnOrigin = gameObject.transform;
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(1.5f, 2, 0), columnOrigin.rotation);
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(-1.5f, 2, 0), columnOrigin.rotation);
+        yield return new WaitForSeconds(0.75f);
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(3f, 2, 0), columnOrigin.rotation);
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(-3f, 2, 0), columnOrigin.rotation);
+        yield return new WaitForSeconds(0.75f);
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(4.5f, 2, 0), columnOrigin.rotation);
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(-4.5f, 2, 0), columnOrigin.rotation);
+        yield return new WaitForSeconds(0.75f);
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(6f, 2, 0), columnOrigin.rotation);
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(-6f, 2, 0), columnOrigin.rotation);
+        yield return new WaitForSeconds(0.75f);
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(7.5f, 2, 0), columnOrigin.rotation);
+        Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(-7.5f, 2, 0), columnOrigin.rotation);
     }
 }

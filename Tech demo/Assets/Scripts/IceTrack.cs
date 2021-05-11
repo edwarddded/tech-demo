@@ -15,7 +15,7 @@ public class IceTrack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.transform.position.x - Player.transform.position.x < 5 || this.transform.position.y < 12)
+        if (this.transform.position.x - Player.transform.position.x < 5 || this.transform.position.y < 9)
         {
             transform.Translate(0, -10 * Time.deltaTime, 0, Space.Self);
         }

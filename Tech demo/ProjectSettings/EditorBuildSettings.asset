@@ -38,4 +38,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fire Room/Fire-Boss.unity
     guid: c17c582f6a5ff3c46b5cf0b2f9727816
+  - enabled: 1
+    path: Assets/Scenes/Ice Room/Ice-Room1.unity
+    guid: 2eb4023ee2a9c8241b9d726c3f6d67c3
+  - enabled: 1
+    path: Assets/Scenes/Ice Room/Ice-Room2.unity
+    guid: b671bfc5c07597241a222c465a69e54f
+  - enabled: 1
+    path: Assets/Scenes/Ice Room/Ice-Room3.unity
+    guid: 80b91dcfef1688e42a3d5109c6071a65
+  - enabled: 1
+    path: Assets/Scenes/Ice Room/Ice-Boss.unity
+    guid: 47606a5afee5256488fd2ab798a7a505
   m_configObjects: {}

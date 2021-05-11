@@ -82,6 +82,11 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(10);
             gameObject.transform.position = new Vector2(-22.4f, -11);
         }
+        if (collision.gameObject.tag == "icebossPortal")
+        {
+            SceneManager.LoadScene(14);
+            gameObject.transform.position = new Vector2(38f, 3);
+        }
     }
 
     // Update is called once per frame

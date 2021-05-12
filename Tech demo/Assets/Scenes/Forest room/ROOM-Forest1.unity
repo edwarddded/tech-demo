@@ -388,6 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81012298}
   - component: {fileID: 81012299}
+  - component: {fileID: 81012300}
   m_Layer: 0
   m_Name: turn1 (8)
   m_TagString: turn
@@ -422,7 +423,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.9568558, y: 9.668135}
+  m_Offset: {x: -6.0546722, y: 13.7747}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -433,7 +434,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6016388, y: 4.703579}
+  m_Size: {x: 2.4990845, y: 12.449829}
+  m_EdgeRadius: 0
+--- !u!61 &81012300
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81012297}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -27, y: 0.41}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3061066, y: 5.5902023}
   m_EdgeRadius: 0
 --- !u!1 &99829204
 GameObject:
@@ -930,18 +957,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.9796073, y: 0.18871905}
-  - {x: -0.7175892, y: 0.1709977}
-  - {x: -0.5342219, y: 0.12827079}
-  - {x: -0.3873537, y: 0.09254964}
-  - {x: -0.28241807, y: 0.07986895}
-  - {x: -0.030926708, y: 0.08244887}
-  - {x: 0.0788268, y: 0.0874873}
-  - {x: 0.20224807, y: 0.13942681}
-  - {x: 0.35527626, y: 0.20619982}
-  - {x: 0.49182168, y: 0.24556641}
-  - {x: 0.5596244, y: 0.24496174}
-  - {x: 0.62598026, y: 0.19843738}
+  - {x: -0.96877766, y: 0.15945852}
+  - {x: -0.702831, y: 0.14911066}
+  - {x: -0.4417138, y: 0.08904197}
+  - {x: -0.20558807, y: 0.06050977}
+  - {x: -0.06599617, y: 0.060746104}
+  - {x: 0.44247094, y: 0.19362816}
+  - {x: 0.5495163, y: 0.2240012}
 --- !u!212 &206973903
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1397,7 +1419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314147573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 171.7, y: 2.3, z: 0}
+  m_LocalPosition: {x: 171.61, y: -6.45, z: 0}
   m_LocalScale: {x: 9.065395, y: 10.358355, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1764,7 +1786,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1086575192}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3840,7 +3862,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4557,7 +4579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150058251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 103.9, y: -9.53, z: 0}
+  m_LocalPosition: {x: 103.2, y: -11.2, z: 0}
   m_LocalScale: {x: 5.057481, y: 3.2387989, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4797,7 +4819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234764692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.3, y: 0.3, z: -83.061455}
+  m_LocalPosition: {x: 102.39, y: -4.71, z: -83.061455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5397,7 +5419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476412153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 141.36, y: 2.99, z: 0}
+  m_LocalPosition: {x: 141.8, y: 2.99, z: 0}
   m_LocalScale: {x: 53.942776, y: 18.654697, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6392,11 +6414,59 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854616741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 225, y: 9.1, z: 0}
+  m_LocalPosition: {x: 225.27, y: 5.26, z: 0}
   m_LocalScale: {x: 38.980984, y: 20.879278, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1856010509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856010511}
+  - component: {fileID: 1856010510}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1856010510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856010509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74ed897e3399204e8481732ebebbcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy1: {fileID: 6755375341525000729, guid: 2262173c98ad68a4082e39b279b89ad7, type: 3}
+  Enemy2: {fileID: 1100164881721842059, guid: c650ca87727058b4f83f68ca98e2cc32, type: 3}
+  Enemy3: {fileID: 8323511412006162403, guid: b2928d9151639da4f9f520ea8fc83b70, type: 3}
+  MiniX: 207
+  MaxX: 208
+--- !u!4 &1856010511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856010509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 207, y: 16.7, z: -9.846999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1893881018
 GameObject:
@@ -7323,8 +7393,10 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -3.7853713, y: -2.396748}
-  - {x: -2.5128982, y: -2.0520494}
-  - {x: -1.2024368, y: -1.6334181}
+  - {x: -3.2800243, y: -2.0494375}
+  - {x: -2.8333588, y: -2.0433667}
+  - {x: -2.3999016, y: -2.0368795}
+  - {x: -1.1972475, y: -1.4773546}
   - {x: 0.7545413, y: -1.2971485}
   - {x: 1.9330467, y: -0.677445}
   - {x: 2.8284924, y: -0.5885165}

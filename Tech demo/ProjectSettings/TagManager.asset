@@ -17,6 +17,7 @@ TagManager:
   - Climbable
   - firebossProtal
   - FirePortal
+  - ToFire
   layers:
   - Default
   - TransparentFX

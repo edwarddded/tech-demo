@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &6687733
 Transform:
   m_ObjectHideFlags: 0
@@ -198,7 +200,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 3.5, y: -0.000030517578}
   m_SizeDelta: {x: -6.999695, y: 0.006713867}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -449,6 +451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 402161045117807080, guid: b17e9dc8951a1284fab21fefe4517fbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1640369452273852425, guid: b17e9dc8951a1284fab21fefe4517fbd,
         type: 3}
@@ -732,6 +739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &173776976
 Transform:
   m_ObjectHideFlags: 0
@@ -776,6 +785,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &194798427
 Transform:
   m_ObjectHideFlags: 0
@@ -929,8 +940,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!68 &238986822
-EdgeCollider2D:
+--- !u!61 &238986822
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -942,11 +953,19 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2917433}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.5, y: 1.41}
+    newSize: {x: 14.5, y: 1.41}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.5, y: 0.82651347}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -7.2649264, y: 0.26185107}
-  - {x: 7.25, y: 0.31762102}
 --- !u!95 &238986823
 Animator:
   serializedVersion: 3
@@ -1942,6 +1961,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &453672723
 Transform:
   m_ObjectHideFlags: 0
@@ -2088,6 +2109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &490476047
 Transform:
   m_ObjectHideFlags: 0
@@ -2296,7 +2319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &559081305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2556,6 +2579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &665365594
 Transform:
   m_ObjectHideFlags: 0
@@ -2924,6 +2949,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &752996974
 Transform:
   m_ObjectHideFlags: 0
@@ -3731,7 +3758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1022012244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4282,7 +4309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &1220070757
 Camera:
   m_ObjectHideFlags: 0
@@ -5146,6 +5173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &1407421552
 Transform:
   m_ObjectHideFlags: 0
@@ -5733,6 +5762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &1661657940
 Transform:
   m_ObjectHideFlags: 0
@@ -6149,8 +6180,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!68 &1792932515
-EdgeCollider2D:
+--- !u!61 &1792932515
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6162,11 +6193,19 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.22579001}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.5, y: 1.41}
+    newSize: {x: 14.5, y: 1.41}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.5, y: 0.95842004}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -7.2649264, y: 0.26185107}
-  - {x: 7.25, y: 0.31762102}
 --- !u!212 &1792932516
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6498,6 +6537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &1846901146
 Transform:
   m_ObjectHideFlags: 0
@@ -6918,6 +6959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &1970059463
 Transform:
   m_ObjectHideFlags: 0
@@ -7041,7 +7084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2002505916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7111,8 +7154,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!68 &2009325930
-EdgeCollider2D:
+--- !u!61 &2009325930
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7124,11 +7167,19 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.27350956}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.5, y: 1.41}
+    newSize: {x: 14.5, y: 1.41}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.5, y: 0.8629807}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -7.2649264, y: 0.26185107}
-  - {x: 7.25, y: 0.31762102}
 --- !u!95 &2009325931
 Animator:
   serializedVersion: 3
@@ -7644,6 +7695,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &2112484974
 Transform:
   m_ObjectHideFlags: 0
@@ -7766,6 +7819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 631916771507304229, guid: 6e11d9123d212854099efd7faa6aa95e, type: 3}
+  spawnTime: 2
+  spawnDelay: 3
 --- !u!4 &2118676324
 Transform:
   m_ObjectHideFlags: 0

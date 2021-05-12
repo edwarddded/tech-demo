@@ -16,6 +16,7 @@ public class Boss : MonoBehaviour
     private PlayerBossSkill playerBossSkill;
     private bool playcanmove;
     private BossHealthBar healthBar;
+    private Transform Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class Boss : MonoBehaviour
         healthBar.setMaxHealth(BossHealth);
 
         playerBossSkill = GameObject.Find("Player").GetComponent<PlayerBossSkill>();
-
+        Player = GameObject.Find("Player").GetComponent<Transform>();
     }
     
     
@@ -37,13 +38,13 @@ public class Boss : MonoBehaviour
         int rand = Random.Range(1, 4);
         if (BossHealth < 40 && rand == 1)
         {   
-            Instantiate(item1, Portal.transform.position, Portal.transform.rotation);
+            Instantiate(item1, Player.position, Player.rotation);
         }else if (BossHealth < 40 && rand == 2)
         {
-            Instantiate(item2, Portal.transform.position, Portal.transform.rotation);
+            Instantiate(item2, Player.position, Player.rotation);
         }else if (BossHealth < 40 && rand == 3)
         {
-            Instantiate(item3, Portal.transform.position, Portal.transform.rotation);
+            Instantiate(item3, Player.position, Player.rotation);
         }
         if (BossHealth <20 && BossHealth >3)
         {
@@ -62,8 +63,8 @@ public class Boss : MonoBehaviour
         playerBossSkill.hasForestSkill = true;
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         Destroy(sr);
-        //Vector3 fireposition = new Vector3(-20, 20.35f, 0);
-        //Instantiate(FirePortal, fireposition, Portal.transform.rotation);
+        Vector3 fireposition = new Vector3(-16.67f, 18.05f, 0);
+        Instantiate(FirePortal, fireposition, Portal.transform.rotation);
         Ani.SetBool("dialoguePlay", true);
     }
     void SetAttackAnimation()

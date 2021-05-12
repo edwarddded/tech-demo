@@ -5,25 +5,17 @@ using UnityEngine;
 public class FireBallShoot : MonoBehaviour
 {
     public GameObject fireball;
-    int i = 2;
+    public float spawnTime = 2;
+    public float spawnDelay = 3;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("ShootFireball", spawnTime, spawnDelay);
     }
-    void shoot()
+
+    public void ShootFireball()
     {
         Instantiate(fireball, transform.position, transform.rotation);
-        
     }
     
-    // Update is called once per frame
-    void Update()
-    {
-        if (Time.time > i)
-        {
-            i += 3;
-            shoot();
-        }
-    }
 }

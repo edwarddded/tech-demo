@@ -16,7 +16,8 @@ public class FireBoss : MonoBehaviour
 
     public bool enemyright = true;
     public Transform Firepoint;
-    int i = 1;
+    public float spawnTime = 2;
+    public float spawnDelay = 7;
 
     private BossHealthBar healthBar;
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class FireBoss : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         healthBar = GameObject.Find("Healthbar").GetComponent<BossHealthBar>();
         healthBar.setMaxHealth(firebosshealth);
+        InvokeRepeating("Fireball", spawnTime, spawnDelay);
     }
 
     // Update is called once per frame
@@ -86,36 +88,34 @@ public class FireBoss : MonoBehaviour
         if (time < 2.5)
         {
             Ani.SetBool("IsAttack", true);
-            if (Time.time > i)
-            {
-                i += 2;
+           
                 if (transform.localScale.x < 0.1)
                 {
                     Firepoint.transform.rotation = Quaternion.Euler(Firepoint.rotation.x, 180, 0);
-                    StartCoroutine(Fireball());
-                }
+                
+            }
                 else
                 {
                     Firepoint.transform.rotation = Quaternion.Euler(Firepoint.rotation.x, 0, 0);
-                    StartCoroutine(Fireball());
-                }
+                
             }
+            
         }
         else
         {
             Ani.SetBool("IsAttack", false);
         }
     }
-    IEnumerator Fireball()
+    public void Fireball()
     {    
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 45));
-        yield return new WaitForSeconds(0.15f);
+        
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 90));
-        yield return new WaitForSeconds(0.15f);
+       
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 135));
-        yield return new WaitForSeconds(0.15f);
+        
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 180));
-        yield return new WaitForSeconds(0.15f);
+        
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 225));
 
 

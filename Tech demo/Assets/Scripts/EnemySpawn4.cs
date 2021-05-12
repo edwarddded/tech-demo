@@ -16,7 +16,7 @@ public class EnemySpawn4 : MonoBehaviour
     void Start()
     {
         random = Random.Range(1, 4);
-        randX = Random.Range(81, 83f);
+        randX = Random.Range(102, 103f);
         
         Debug.Log(random);
 

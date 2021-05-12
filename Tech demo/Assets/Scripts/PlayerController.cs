@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
             if (rand ==1)
             {
                 SceneManager.LoadScene(3);
-                gameObject.transform.position = new Vector2(-26.6f, 10);
+                gameObject.transform.position = new Vector2(-26.6f, 5);
             }
             else
             {
@@ -75,8 +75,9 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(5);
             gameObject.transform.position = new Vector2(-23.8f, 28);
-            vcam.m_Lens.OrthographicSize = 28f;
+            
         }
+       
         if (collision.gameObject.tag == "FirePortal")
         {
             int rand = Random.Range(1, 3);
@@ -96,11 +97,16 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(10);
             gameObject.transform.position = new Vector2(-22.4f, -11);
         }
-        if (collision.gameObject.tag == "icebossPortal")
+        if (collision.gameObject.tag == "ToFire")
         {
-            SceneManager.LoadScene(14);
-            gameObject.transform.position = new Vector2(38f, 3);
+            SceneManager.LoadScene(7);
+            gameObject.transform.position = new Vector2(-25f, 12.3f);
         }
+        //if (collision.gameObject.tag == "icebossPortal")
+        //{
+        //    SceneManager.LoadScene(14);
+        //    gameObject.transform.position = new Vector2(38f, 3);
+        //}
     }
 
     // Update is called once per frame
@@ -191,6 +197,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isjumping = false;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Boss1")
+        {
+            vcam.m_Lens.OrthographicSize = 28f;
+        }
+        else
+        {
+            vcam.m_Lens.OrthographicSize = 10f;
         }
 
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThrownAxeBehaviour : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 15f;
     public float damage = 5f;
     private Rigidbody2D rb;
     // Start is called before the first frame update

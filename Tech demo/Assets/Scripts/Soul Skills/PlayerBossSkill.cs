@@ -18,6 +18,7 @@ public class PlayerBossSkill : MonoBehaviour
     public bool hasForestSkill = false;
     public bool hasFireSkill = false;
     public bool hasIceSkill = false;
+    private bool isSkillCycling = false;
 
     //Boss skill icons
     public Image forestSkillImage;
@@ -44,6 +45,16 @@ public class PlayerBossSkill : MonoBehaviour
         {
             ApplyCooldown();
         }
+
+        if (!isSkillCycling)
+        {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                StartCoroutine((SwapActiveSkill));
+            }
+        }
+
+
     }
 
     void ApplyCooldown()
@@ -102,9 +113,24 @@ public class PlayerBossSkill : MonoBehaviour
 
     }
 
-    private void SwapActiveSkill()
+    private IEnumerator SwapActiveSkill()
     {
+        isSkillCycling = true;
+        if (currentlySelectedSkill == 1 && hasForestSkill)
+        {
+            currentlySelectedSkill = 2;
+        }
+        if (currentlySelectedSkill == 2 && hasFireSkill)
+        {
+            currentlySelectedSkill = 3;
+        }
+        if (currentlySelectedSkill == 3 && hasIceSkill)
+        {
+            currentlySelectedSkill = 1;
+        }
 
+        yield return new WaitForSeconds(0.5f);
+        isSkillCycling = false;
     }
 
     private void UpdateIcon()

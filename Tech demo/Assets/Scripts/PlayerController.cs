@@ -163,10 +163,12 @@ public class PlayerController : MonoBehaviour
             inputVertical = Input.GetAxisRaw("Vertical");
             rb.velocity = new Vector2(rb.velocity.x, inputVertical * climbSpeed);
             rb.gravityScale = 0;
+            AnimatorOfCharacter.SetBool("isClimbing", true);
         }
         else
         {
             rb.gravityScale = 5;
+            AnimatorOfCharacter.SetBool("isClimbing", false);
         }
 
         

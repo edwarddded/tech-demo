@@ -50,7 +50,7 @@ public class PlayerBossSkill : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                StartCoroutine((SwapActiveSkill));
+                StartCoroutine(SwapActiveSkill());
             }
         }
 

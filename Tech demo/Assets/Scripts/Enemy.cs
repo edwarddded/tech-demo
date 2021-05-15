@@ -82,7 +82,7 @@ public class Enemy : MonoBehaviour
         if (spotted)
         {
             EnemyAni.SetBool("CanSeePlayer", true);
-            speed = 100f;
+            speed = 50f;
         }
         else
         {

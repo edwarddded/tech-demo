@@ -188,6 +188,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4991077979103434456, guid: e5b73787dbef095458a867f884bc8d61,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991077979103434456, guid: e5b73787dbef095458a867f884bc8d61,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.7006228
+      objectReference: {fileID: 0}
     - target: {fileID: 7165825158712252981, guid: e5b73787dbef095458a867f884bc8d61,
         type: 3}
       propertyPath: spawnTime
@@ -369,7 +379,7 @@ PrefabInstance:
     - target: {fileID: 402161045117807080, guid: b17e9dc8951a1284fab21fefe4517fbd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1640369452273852425, guid: b17e9dc8951a1284fab21fefe4517fbd,
         type: 3}

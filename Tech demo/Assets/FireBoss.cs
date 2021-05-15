@@ -20,6 +20,7 @@ public class FireBoss : MonoBehaviour
     public float spawnDelay = 7;
 
     private BossHealthBar healthBar;
+    public GameObject ToicePortal;
     // Start is called before the first frame update
     void Start()
     {
@@ -134,6 +135,8 @@ public class FireBoss : MonoBehaviour
     void Die()
     {
         Instantiate(item, gameObject.transform.position, gameObject.transform.rotation);
+        Vector3 toice = new Vector3(-16.32f, -12f, 0);
+        Instantiate(ToicePortal, toice,transform.rotation);
         Destroy(gameObject);
     }
 }

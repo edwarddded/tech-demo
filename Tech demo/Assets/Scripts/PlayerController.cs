@@ -102,13 +102,31 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(7);
             gameObject.transform.position = new Vector2(-25f, 12.3f);
         }
-        //if (collision.gameObject.tag == "icebossPortal")
-        //{
-        //    SceneManager.LoadScene(14);
-        //    gameObject.transform.position = new Vector2(38f, 3);
-        //}
+        if (collision.gameObject.tag =="ToIce")
+        {
+            SceneManager.LoadScene(11);
+            gameObject.transform.position = new Vector2(-23.2f, 4.5f);
+        }
+        if (collision.gameObject.tag == "IcePortal")
+        {
+            int rand = Random.Range(1, 3);
+            if (rand == 1)
+            {
+                SceneManager.LoadScene(12);
+                gameObject.transform.position = new Vector2(-23.2f, 4.5f);
+            }
+            else
+            {
+                SceneManager.LoadScene(13);
+                gameObject.transform.position = new Vector2(-22.8f, -9.1f);
+            }
+        }
+        if (collision.gameObject.tag == "icebossPortal")
+        {
+            SceneManager.LoadScene(14);
+            gameObject.transform.position = new Vector2(35.7f, 1);
+        }
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {

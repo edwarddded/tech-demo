@@ -198,6 +198,12 @@ PrefabInstance:
       propertyPath: spawnDelay
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7165825158712252981, guid: e5b73787dbef095458a867f884bc8d61,
+        type: 3}
+      propertyPath: ToicePortal
+      value: 
+      objectReference: {fileID: 330507825997897713, guid: 3babb6ef531cca042a2df0bff0d3fabb,
+        type: 3}
     - target: {fileID: 8074212370569768927, guid: e5b73787dbef095458a867f884bc8d61,
         type: 3}
       propertyPath: m_Name

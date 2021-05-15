@@ -18,6 +18,9 @@ TagManager:
   - firebossProtal
   - FirePortal
   - ToFire
+  - icebossPortal
+  - ToIce
+  - IcePortal
   layers:
   - Default
   - TransparentFX

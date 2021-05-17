@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ice Room/Ice-Boss.unity
     guid: 47606a5afee5256488fd2ab798a7a505
+  - enabled: 1
+    path: Assets/Scenes/Ending  Scene.unity
+    guid: d8fc3e74ab08bc2418d05bd3cde66452
   m_configObjects: {}

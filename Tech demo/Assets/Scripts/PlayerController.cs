@@ -126,6 +126,10 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(14);
             gameObject.transform.position = new Vector2(35.7f, 1);
         }
+        if (collision.gameObject.tag == "ToFinal")
+        {
+            SceneManager.LoadScene(15);
+        }
     }
     // Update is called once per frame
     void FixedUpdate()

@@ -12,7 +12,7 @@ public class BossHealthBar : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (sceneName == "Boss1" || sceneName == "Fire-Boss")
+        if (sceneName == "Boss1" || sceneName == "Fire-Boss" || sceneName == "Ice-Boss")
         {
             Fill.SetActive(true);
             Border.SetActive(true);

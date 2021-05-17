@@ -21,6 +21,7 @@ TagManager:
   - icebossPortal
   - ToIce
   - IcePortal
+  - ToFinal
   layers:
   - Default
   - TransparentFX

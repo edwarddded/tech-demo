@@ -40,19 +40,34 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(2);
         invincible = false;
     }
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    if (!invincible)
+    //    {
+    //        if (other.gameObject.tag == "swamp")
+    //        {
+    //            BeginPoint = GameObject.Find("BeginPortal").transform.position;
+    //            Debug.Log(BeginPoint);
+    //            Debug.Log(other.gameObject.name);
+    //            health -= damage;
+    //            Debug.Log(health);
+    //            gameObject.transform.position = BeginPoint;
+    //        }
+    //    }
+    // }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "swamp")
+        {
+            BeginPoint = GameObject.Find("BeginPortal").transform.position;
+            Debug.Log(BeginPoint);
+            Debug.Log(other.gameObject.name);
+            health -= damage;
+            Debug.Log(health);
+            gameObject.transform.position = BeginPoint;
+        }
         if (!invincible)
         {
-            if (other.gameObject.tag == "swamp")
-            {
-                BeginPoint = GameObject.Find("BeginPortal").transform.position;
-                Debug.Log(BeginPoint);
-                Debug.Log(other.gameObject.name);
-                health -= damage;
-                Debug.Log(health);
-                gameObject.transform.position = BeginPoint;
-            }
             if (other.gameObject.tag == "Laser")
             {
                 Debug.Log(other.gameObject.name);
@@ -101,7 +116,7 @@ public class Health : MonoBehaviour
         }
         else if (health == 2)
         {
-            //fullHearts1.gameObject.SetActive(true);
+            fullHearts1.gameObject.SetActive(true);
             fullhearts2.gameObject.SetActive(true);
             fullhearts3.gameObject.SetActive(false);
             fullhearts4.gameObject.SetActive(false);

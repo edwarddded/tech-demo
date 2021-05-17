@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBoss : MonoBehaviour
+public class IceBoss : MonoBehaviour
 {
     public float speed = 200f;
 
@@ -56,7 +56,7 @@ public class FireBoss : MonoBehaviour
             Firepoint.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
-   
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("turn"))
@@ -70,7 +70,7 @@ public class FireBoss : MonoBehaviour
                 enemyright = true;
             }
         }
-     
+
     }
 
     private void Update()
@@ -89,18 +89,18 @@ public class FireBoss : MonoBehaviour
         if (time < 2.5)
         {
             Ani.SetBool("IsAttack", true);
-           
-                if (transform.localScale.x < 0.1)
-                {
-                    Firepoint.transform.rotation = Quaternion.Euler(Firepoint.rotation.x, 180, 0);
-                
+
+            if (transform.localScale.x < 0.1)
+            {
+                Firepoint.transform.rotation = Quaternion.Euler(Firepoint.rotation.x, 180, 0);
+
             }
-                else
-                {
-                    Firepoint.transform.rotation = Quaternion.Euler(Firepoint.rotation.x, 0, 0);
-                
+            else
+            {
+                Firepoint.transform.rotation = Quaternion.Euler(Firepoint.rotation.x, 0, 0);
+
             }
-            
+
         }
         else
         {
@@ -108,15 +108,15 @@ public class FireBoss : MonoBehaviour
         }
     }
     public void Fireball()
-    {    
+    {
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 45));
-        
+
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 90));
-       
+
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 135));
-        
+
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 180));
-        
+
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 225));
 
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 270));
@@ -141,8 +141,8 @@ public class FireBoss : MonoBehaviour
     void Die()
     {
         Instantiate(item, gameObject.transform.position, gameObject.transform.rotation);
-        Vector3 toice = new Vector3(-15, -10.3f, 0);
-        Instantiate(ToicePortal, toice,transform.rotation);
+        Vector3 ToFinal = new Vector3(38f, 2.2f, 0);
+        Instantiate(ToicePortal, ToFinal, transform.rotation);
         Destroy(gameObject);
     }
 }

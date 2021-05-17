@@ -21,6 +21,9 @@ public class FireBoss : MonoBehaviour
 
     private BossHealthBar healthBar;
     public GameObject ToicePortal;
+
+    private PlayerBossSkill playerBossSkill;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,8 @@ public class FireBoss : MonoBehaviour
         healthBar = GameObject.Find("Healthbar").GetComponent<BossHealthBar>();
         healthBar.setMaxHealth(firebosshealth);
         InvokeRepeating("Fireball", spawnTime, spawnDelay);
+
+        playerBossSkill = GameObject.Find("Player").GetComponent<PlayerBossSkill>();
     }
 
     // Update is called once per frame
@@ -140,7 +145,8 @@ public class FireBoss : MonoBehaviour
 
     void Die()
     {
-        Instantiate(item, gameObject.transform.position, gameObject.transform.rotation);
+        //Instantiate(item, gameObject.transform.position, gameObject.transform.rotation);
+        playerBossSkill.hasFireSkill = true;
         Vector3 toice = new Vector3(-15, -10.3f, 0);
         Instantiate(ToicePortal, toice,transform.rotation);
         Destroy(gameObject);

@@ -22,9 +22,11 @@ public class PlayerBossSkill : MonoBehaviour
 
     //Boss skill icons
     public Image forestSkillImage;
+    public Image fireSkillImage;
 
     //Boss skill prefabs
-    public GameObject ForestLaserArm; 
+    public GameObject ForestLaserArm;
+    public GameObject demonSummonPrefab;
 
     void Start()
     {
@@ -103,7 +105,8 @@ public class PlayerBossSkill : MonoBehaviour
 
         else if(currentlySelectedSkill == 2 && hasFireSkill)
         {
-
+            var demonSummon = Instantiate(demonSummonPrefab, new Vector3(transform.position.x, transform.position.y + 4, transform.position.z), firepoint.rotation);
+            demonSummon.transform.parent = gameObject.transform;
         }
 
         else if(currentlySelectedSkill == 3 && hasIceSkill)
@@ -116,20 +119,26 @@ public class PlayerBossSkill : MonoBehaviour
     private IEnumerator SwapActiveSkill()
     {
         isSkillCycling = true;
-        if (currentlySelectedSkill == 1 && hasForestSkill)
+        if (currentlySelectedSkill == 1 && hasFireSkill)
         {
             currentlySelectedSkill = 2;
         }
-        if (currentlySelectedSkill == 2 && hasFireSkill)
+        else if (currentlySelectedSkill == 2 && hasIceSkill)
         {
             currentlySelectedSkill = 3;
         }
-        if (currentlySelectedSkill == 3 && hasIceSkill)
+        else if(currentlySelectedSkill == 2)
+        {
+            currentlySelectedSkill = 1;
+        }
+        else if(currentlySelectedSkill == 3)
         {
             currentlySelectedSkill = 1;
         }
 
-        yield return new WaitForSeconds(0.5f);
+
+
+        yield return new WaitForSeconds(0.75f);
         isSkillCycling = false;
     }
 
@@ -138,15 +147,17 @@ public class PlayerBossSkill : MonoBehaviour
         if(currentlySelectedSkill == 1 && hasForestSkill)
         {
             forestSkillImage.enabled = true;
-            // Disable the other two images
+            fireSkillImage.enabled = false;
         }
         if(currentlySelectedSkill == 2 && hasFireSkill)
         {
-
+            forestSkillImage.enabled = false;
+            fireSkillImage.enabled = true;
         }
         if(currentlySelectedSkill == 3 && hasIceSkill)
         {
-
+            forestSkillImage.enabled = false;
+            fireSkillImage.enabled = false;
         }
     }
 }

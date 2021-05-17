@@ -267,7 +267,10 @@ MonoBehaviour:
   hasFireSkill: 0
   hasIceSkill: 0
   forestSkillImage: {fileID: 0}
+  fireSkillImage: {fileID: 0}
   ForestLaserArm: {fileID: 9073841872258899808, guid: 9a6e3a3f6305ae54f807e996fa4bb88d,
+    type: 3}
+  demonSummonPrefab: {fileID: 6600370129880381861, guid: 8d3e68cbca584f94c8a99b621a6356fd,
     type: 3}
 --- !u!114 &1813287749560532711
 MonoBehaviour:

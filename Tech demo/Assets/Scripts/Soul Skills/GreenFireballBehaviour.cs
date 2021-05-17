@@ -6,13 +6,14 @@ public class GreenFireballBehaviour : MonoBehaviour
 {
     public float speed = 15f;
     public float damage = 3f;
+    public float projectileLifetime;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, projectileLifetime);
     }
 
     // Update is called once per frame

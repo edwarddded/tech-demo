@@ -119,6 +119,12 @@ public class FireBoss : MonoBehaviour
         
         Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 225));
 
+        Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 270));
+
+        Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 315));
+
+        Instantiate(BlueFireball, Firepoint.position, Firepoint.rotation * Quaternion.Euler(0, 0, 360));
+
 
     }
     public void TakeDamage(float damage)

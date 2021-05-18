@@ -5,6 +5,7 @@ using UnityEngine;
 public class IceGuardianSummonBehaviour : MonoBehaviour
 {
     private GameObject player;
+    private GameObject firePoint;
     private Vector3 playerPos;
     private Animator anim;
 
@@ -14,6 +15,8 @@ public class IceGuardianSummonBehaviour : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        firePoint = GameObject.Find("/Player/firePoint");
+
         anim = GetComponent<Animator>();
         StartCoroutine(Die());
     }
@@ -21,10 +24,19 @@ public class IceGuardianSummonBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerPos.x = player.transform.position.x+5;
+        if (firePoint.transform.rotation.eulerAngles.y == 180)
+        {
+            playerPos.x = player.transform.position.x -5;
+        }
+        else
+        {
+            playerPos.x = player.transform.position.x + 5;
+        }
         playerPos.y = player.transform.position.y+1.5f;
         playerPos.z = player.transform.position.z;
         transform.position = playerPos;
+        transform.rotation = firePoint.transform.rotation;
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)

@@ -248,6 +248,8 @@ MonoBehaviour:
     type: 3}
   fireColumnPrefab: {fileID: 1812746677950030017, guid: 067d75d539ade06459be88b2db7ce56b,
     type: 3}
+  iceGuardianPrefab: {fileID: 793064752775370578, guid: e18cc09271c4bd04b83d86260b38bfc8,
+    type: 3}
 --- !u!114 &1640369452273852425
 MonoBehaviour:
   m_ObjectHideFlags: 0

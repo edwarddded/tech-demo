@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5630977420962124314}
   - component: {fileID: 1340049889243112183}
   m_Layer: 0
-  m_Name: blueEnemySoul 1
+  m_Name: IceGuardian Soul
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.4764151, g: 1, b: 0.92788047, a: 1}
+  m_Color: {r: 0.75, g: 1, b: 0.9664179, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -144,9 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699c98750db3dbf4ab40857017f88727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityIcon: {fileID: 1514316577912267622, guid: f30a50667b9f6224eb5d9bdcd8d04e00,
+  abilityIcon: {fileID: 5316104338516066642, guid: 4b9af3248b80c8744a2d93e4964f1aef,
     type: 3}
-  skillIndexNumber: 1
+  skillIndexNumber: 9
 --- !u!95 &1340049889243112183
 Animator:
   serializedVersion: 3

@@ -14,6 +14,7 @@ public class PlayerSkillDictionary : MonoBehaviour
     public GameObject greenFireballPrefab;
     public GameObject skeletonGuardianPrefab;
     public GameObject fireColumnPrefab;
+    public GameObject iceGuardianPrefab;
 
     void Start()
     {
@@ -43,6 +44,8 @@ public class PlayerSkillDictionary : MonoBehaviour
             SkeletonGuardian();
         if (abilityIndex == 8)
             StartCoroutine(FireColumn());
+        if (abilityIndex == 9)
+            IceGuardian();
     }
 
     //Below is the collection of all the player skills
@@ -143,5 +146,17 @@ public class PlayerSkillDictionary : MonoBehaviour
         yield return new WaitForSeconds(0.75f);
         Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(7.5f, 2, 0), columnOrigin.rotation);
         Instantiate(fireColumnPrefab, columnOrigin.position + new Vector3(-7.5f, 2, 0), columnOrigin.rotation);
+    }
+
+    void IceGuardian()
+    {
+        if (firepoint.rotation.eulerAngles.y == 180)
+        {
+            Instantiate(iceGuardianPrefab, new Vector3(transform.position.x, transform.position.y + 1.7f, transform.position.z), firepoint.rotation);
+        }
+        else
+        {
+            Instantiate(iceGuardianPrefab, new Vector3(transform.position.x - 5, transform.position.y + 1.7f, transform.position.z), firepoint.rotation);
+        }
     }
 }

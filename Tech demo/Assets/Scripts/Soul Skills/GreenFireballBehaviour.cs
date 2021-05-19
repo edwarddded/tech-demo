@@ -49,14 +49,21 @@ public class GreenFireballBehaviour : MonoBehaviour
         FireBoss fireboss = col.GetComponent<FireBoss>();
         if (fireboss != null)
         {
-            fireboss.TakeDamage(2f);
+            fireboss.TakeDamage(damage);
+            Destroy(gameObject);
            
         }
         Wizard wizard = col.GetComponent<Wizard>();
         if (wizard != null)
         {
-            wizard.TakeDamage(2f);
-           
+            wizard.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+        IceBoss iceboss = col.GetComponent<IceBoss>();
+        if (iceboss != null)
+        {
+            iceboss.TakeDamage(damage);
+            Destroy(gameObject);
         }
 
     }

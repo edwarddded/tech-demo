@@ -81,6 +81,11 @@ public class FireBoss : MonoBehaviour
     private void Update()
     {
         SetAttackAnimation();
+        if (firebosshealth < 20)
+        {
+            SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+            sr.material.color = Color.red;
+        }       
     }
     void SetAttackAnimation()
     {

@@ -24,19 +24,30 @@ public class FireColumnSpell : MonoBehaviour
         {
             enemy.TakeDamage(damage);
         }
-
         BossPart bossPart = col.GetComponent<BossPart>();
         if (bossPart != null)
         {
             bossPart.TakeDamage(damage);
-
         }
-
         Boss boss = col.GetComponent<Boss>();
         if (boss != null)
         {
             boss.TakeDamage(damage);
-
+        }
+        Wizard wizard = col.GetComponent<Wizard>();
+        if (wizard != null)
+        {
+            wizard.TakeDamage(damage);
+        }
+        FireBoss fireboss = col.GetComponent<FireBoss>();
+        if (fireboss != null)
+        {
+            fireboss.TakeDamage(damage);
+        }
+        IceBoss iceboss = col.GetComponent<IceBoss>();
+        if (iceboss != null)
+        {
+            iceboss.TakeDamage(damage);
         }
 
     }

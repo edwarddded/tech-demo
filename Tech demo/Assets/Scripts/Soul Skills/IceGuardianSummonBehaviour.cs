@@ -66,6 +66,11 @@ public class IceGuardianSummonBehaviour : MonoBehaviour
         {
             wizard.TakeDamage(damage);
         }
+        IceBoss iceboss = col.GetComponent<IceBoss>();
+        if (iceboss != null)
+        {
+            iceboss.TakeDamage(damage);
+        }
     }
 
     IEnumerator Die()

@@ -52,7 +52,11 @@ public class MushroomBombBehaviour : MonoBehaviour
         if (wizard != null)
         {
             wizard.TakeDamage(3f);
-            
+        }
+        IceBoss iceboss = collision.collider.GetComponent<IceBoss>();
+        if (iceboss != null)
+        {
+            iceboss.TakeDamage(3f);
 
         }
     } 
@@ -91,6 +95,11 @@ public class MushroomBombBehaviour : MonoBehaviour
                 if (fireboss != null)
                 {
                     fireboss.TakeDamage(3f);
+                }
+                IceBoss iceboss = colliders[i].gameObject.GetComponent<IceBoss>();
+                if (iceboss !=null)
+                {
+                    iceboss.TakeDamage(3f);
                 }
             }
 

@@ -43,7 +43,6 @@ public class Bullet : MonoBehaviour
         {
             bossPart.TakeDamage(2f);
             Destroy(gameObject);
-
         }
 
         Boss boss = col.GetComponent<Boss>();
@@ -57,11 +56,19 @@ public class Bullet : MonoBehaviour
         if (fireboss != null)
         {
             fireboss.TakeDamage(2f);
+            Destroy(gameObject);
         }
         Wizard wizard = col.GetComponent<Wizard>();
         if (wizard != null)
         {
             wizard.TakeDamage(2f);
+            Destroy(gameObject);
+        }
+        IceBoss iceboss = col.GetComponent<IceBoss>();
+        if (iceboss != null)
+        {
+            iceboss.TakeDamage(2f);
+            Destroy(gameObject);
         }
 
     }

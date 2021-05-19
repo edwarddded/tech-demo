@@ -55,6 +55,13 @@ public class FlyingEyeSummonBehaviour : MonoBehaviour
             health.RestoreHealth(3);
             Destroy(gameObject);
         }
+        IceBoss iceboss = col.GetComponent<IceBoss>();
+        if (iceboss != null)
+        {
+            iceboss.TakeDamage(3f);
+            health.RestoreHealth(3);
+            Destroy(gameObject);
+        }
     }
 
 }

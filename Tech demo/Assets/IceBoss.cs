@@ -9,7 +9,7 @@ public class IceBoss : MonoBehaviour
     public GameObject item, BlueFireball;
 
     SpriteRenderer sr;
-    public float firebosshealth = 50f;
+    public float Icebosshealth = 50f;
     public float time = 8f;
     private Rigidbody2D rb;
     public Animator Ani;
@@ -27,7 +27,7 @@ public class IceBoss : MonoBehaviour
         sr = gameObject.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         healthBar = GameObject.Find("Healthbar").GetComponent<BossHealthBar>();
-        healthBar.setMaxHealth(firebosshealth);
+        healthBar.setMaxHealth(Icebosshealth);
         InvokeRepeating("Fireball", spawnTime, spawnDelay);
     }
 
@@ -76,6 +76,11 @@ public class IceBoss : MonoBehaviour
     private void Update()
     {
         SetAttackAnimation();
+        if (Icebosshealth < 20)
+        {
+            SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+            sr.material.color = Color.red;
+        }
     }
     void SetAttackAnimation()
     {
@@ -129,10 +134,10 @@ public class IceBoss : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        firebosshealth -= damage;
-        healthBar.SetHealth(firebosshealth);
-        Debug.Log(firebosshealth);
-        if (firebosshealth <= 0)
+        Icebosshealth -= damage;
+        healthBar.SetHealth(Icebosshealth);
+        Debug.Log(Icebosshealth);
+        if (Icebosshealth <= 0)
         {
             Die();
         }

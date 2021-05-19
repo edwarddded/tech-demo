@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   item: {fileID: 2952880170715737907, guid: 1e7f893c05cf37d4d93bc7f9aa6321d7, type: 3}
-  health: 10
+  health: 20
   EnemyAni: {fileID: 1315809204803761015}
   Player: {fileID: 402161045117807080, guid: b17e9dc8951a1284fab21fefe4517fbd, type: 3}
   Sightendpos: {fileID: 1315809205764948194}
@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315809205751920505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: -0.23, z: 0}
+  m_LocalPosition: {x: -0.07, y: -0.799, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1315809204803761013}
@@ -256,7 +256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315809205764948205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.56, y: -0.8, z: 0}
+  m_LocalPosition: {x: 1.56, y: -0.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1315809204803761013}

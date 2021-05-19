@@ -42,5 +42,10 @@ public class PlayerLaserArmBehaviour : MonoBehaviour
         {
             wizard.TakeDamage(10f);
         }
+        IceBoss iceboss = col.GetComponent<IceBoss>();
+        if (iceboss != null)
+        {
+            iceboss.TakeDamage(10f);
+        }
     }
 }

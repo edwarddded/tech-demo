@@ -15,6 +15,7 @@ public class PlayerSkillDictionary : MonoBehaviour
     public GameObject skeletonGuardianPrefab;
     public GameObject fireColumnPrefab;
     public GameObject iceGuardianPrefab;
+    public GameObject thunderSummonPrefab;
 
     void Start()
     {
@@ -46,6 +47,8 @@ public class PlayerSkillDictionary : MonoBehaviour
             StartCoroutine(FireColumn());
         if (abilityIndex == 9)
             IceGuardian();
+        if (abilityIndex == 10)
+            ThunderSummon();
     }
 
     //Below is the collection of all the player skills
@@ -158,5 +161,10 @@ public class PlayerSkillDictionary : MonoBehaviour
         {
             Instantiate(iceGuardianPrefab, new Vector3(transform.position.x - 5, transform.position.y + 1.7f, transform.position.z), firepoint.rotation);
         }
+    }
+
+    void ThunderSummon()
+    {
+        Instantiate(thunderSummonPrefab, new Vector3(transform.position.x, transform.position.y + 3f, transform.position.z), firepoint.rotation);
     }
 }

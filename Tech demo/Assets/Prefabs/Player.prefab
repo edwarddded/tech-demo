@@ -250,6 +250,8 @@ MonoBehaviour:
     type: 3}
   iceGuardianPrefab: {fileID: 793064752775370578, guid: e18cc09271c4bd04b83d86260b38bfc8,
     type: 3}
+  thunderSummonPrefab: {fileID: 5311796095803077715, guid: 342aaedc134b17e459f293be3a35187b,
+    type: 3}
 --- !u!114 &1640369452273852425
 MonoBehaviour:
   m_ObjectHideFlags: 0

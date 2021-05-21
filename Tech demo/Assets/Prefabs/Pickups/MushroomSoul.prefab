@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3963829820110178081}
   - component: {fileID: 7179472786362192989}
   - component: {fileID: 6072404574738967535}
+  - component: {fileID: 4439607902562984358}
   m_Layer: 0
   m_Name: MushroomSoul
   m_TagString: Untagged
@@ -72,8 +73,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c44f20845d45c9541bf1f6b74e4f7768, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -2640565209637857511, guid: d5ab4dfb971c345ab81234f3d7db3823,
+    type: 3}
+  m_Color: {r: 0.5471698, g: 0.007742955, b: 0.21845657, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -114,3 +116,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.002307415, y: 0.026556075}
   m_Size: {x: 0.563468, y: 0.5927607}
   m_Direction: 0
+--- !u!95 &4439607902562984358
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8557235892768744330}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44d0b461fc41e40bf8633cd62b548822, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

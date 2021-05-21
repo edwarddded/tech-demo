@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  item: {fileID: 2952880170715737907, guid: 1e7f893c05cf37d4d93bc7f9aa6321d7, type: 3}
+  item: {fileID: 3729820686443580380, guid: 3a0d21c820789c545aaff093607b3d35, type: 3}
   health: 20
   EnemyAni: {fileID: 1315809204803761015}
   Player: {fileID: 402161045117807080, guid: b17e9dc8951a1284fab21fefe4517fbd, type: 3}

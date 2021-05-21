@@ -16,6 +16,7 @@ public class PlayerSkillDictionary : MonoBehaviour
     public GameObject fireColumnPrefab;
     public GameObject iceGuardianPrefab;
     public GameObject thunderSummonPrefab;
+    public GameObject iceShatterPrefab;
 
     void Start()
     {
@@ -49,6 +50,8 @@ public class PlayerSkillDictionary : MonoBehaviour
             IceGuardian();
         if (abilityIndex == 10)
             ThunderSummon();
+        if (abilityIndex == 11)
+            IceShatter();
     }
 
     //Below is the collection of all the player skills
@@ -166,5 +169,13 @@ public class PlayerSkillDictionary : MonoBehaviour
     void ThunderSummon()
     {
         Instantiate(thunderSummonPrefab, new Vector3(transform.position.x, transform.position.y + 3f, transform.position.z), firepoint.rotation);
+    }
+
+    void IceShatter()
+    {
+        Instantiate(iceShatterPrefab, transform.position + new Vector3(5, 5, 0), transform.rotation);
+        Instantiate(iceShatterPrefab, transform.position + new Vector3(-5, 5, 0), transform.rotation);
+        Instantiate(iceShatterPrefab, transform.position + new Vector3(-5, -5, 0), transform.rotation);
+        Instantiate(iceShatterPrefab, transform.position + new Vector3(5, -5, 0), transform.rotation);
     }
 }

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2ba59ca12024e57b90a6900697848c, type: 3}
+  m_Name: Tutorial Dia 1
+  m_EditorClassIdentifier: 
+  dialogueinfo:
+  - myName: Soul
+    portrait: {fileID: 7416825305952834461, guid: c37197bad3acd4fdbbdd74f65660f043,
+      type: 3}
+    myText: Welcome to Tutorial of Charon, In here, use  LEFT AND RIGHt TO MOVE
+  - myName: Soul
+    portrait: {fileID: 7416825305952834461, guid: c37197bad3acd4fdbbdd74f65660f043,
+      type: 3}
+    myText: Press A to attack
+  - myName: Soul
+    portrait: {fileID: 7416825305952834461, guid: c37197bad3acd4fdbbdd74f65660f043,
+      type: 3}
+    myText: Here, Try to come over here

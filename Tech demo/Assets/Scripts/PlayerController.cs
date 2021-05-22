@@ -131,6 +131,27 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(15);
             gameObject.transform.position = new Vector3(-4f, -1.11f);
         }
+        if (collision.gameObject.tag == "ToFirst")
+        {
+            SceneManager.LoadScene(2);
+            Destroyall();
+        }
+    }
+    void Destroyall()
+    {
+        GameObject canvas = GameObject.Find("Canvas").gameObject;
+        GameObject MC = GameObject.Find("Main Camera").gameObject;
+        GameObject Cm = GameObject.Find("CM vcam1").gameObject;
+        GameObject GM = GameObject.Find("GameManager").gameObject;
+
+        if (canvas != null && MC != null && Cm != null && GM != null)
+        {
+            Destroy(canvas);
+            Destroy(MC);
+            Destroy(Cm);
+            Destroy(GM);
+            Destroy(gameObject);
+        }
     }
     // Update is called once per frame
     void FixedUpdate()

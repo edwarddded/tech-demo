@@ -23,10 +23,14 @@ public class CanvasDontdestroy : MonoBehaviour
     {
         if (health.health ==0)
         {
-            Destroy(gameObject);
-            Destroy(cam);
-            Destroy(CM);
-            Destroy(canvas);
+            DestroyAll();
         }
+    }
+    public void DestroyAll()
+    {
+        Destroy(gameObject);
+        Destroy(cam);
+        Destroy(CM);
+        Destroy(canvas);
     }
 }

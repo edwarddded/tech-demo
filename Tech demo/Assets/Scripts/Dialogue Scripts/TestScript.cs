@@ -10,6 +10,7 @@ public class TestScript : MonoBehaviour
     public void TriggerDialogue()
     {
         DialogueManager.instance.EnqueueDialogue(dialogue);
+        
 
     }
     private void OnTriggerEnter2D(Collider2D player)

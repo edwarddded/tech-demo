@@ -64,8 +64,11 @@ public class DialogueManager : MonoBehaviour
         foreach (DialogueBase.Info info in db.dialogueinfo)
         {
             dialogueInfo.Enqueue(info);
+            
+
         }
-        DequeueDialogue();
+
+         DequeueDialogue();
     }
 
     public void DequeueDialogue()
@@ -102,8 +105,71 @@ public class DialogueManager : MonoBehaviour
             
         }
         isCurrentlyTyping = false;
+      
 
     }
+    public void EnqueueAutoPlay(DialogueBase db)
+    {
+
+        dialogueBox.SetActive(true);
+        thePlayer.canMove = false;
+        if (bossani != null)
+        {
+            bossani.SetBool("dialoguePlay", true);
+        }
+
+
+        dialogueInfo.Clear();
+        foreach (DialogueBase.Info info in db.dialogueinfo)
+        {
+            dialogueInfo.Enqueue(info);
+
+
+        }
+
+        DequeueAutoPlay();
+    }
+
+    public void DequeueAutoPlay()
+    {
+        if (dialogueInfo.Count == 0)
+        {
+            endOfDialogue();
+            return;
+        }
+        if (isCurrentlyTyping == true)
+        {
+            CompleteText();
+            StopAllCoroutines();
+            isCurrentlyTyping = false;
+            return;
+        }
+        DialogueBase.Info info = dialogueInfo.Dequeue();
+        completeText = info.myText;
+        dialogueName.text = info.myName;
+        dialogueText.text = info.myText;
+        dialoguePortrait.sprite = info.portrait;
+        dialogueText.text = "";
+        StartCoroutine(AutoPlay(info));
+    }
+
+    IEnumerator AutoPlay(DialogueBase.Info info)
+    {
+        isCurrentlyTyping = true;
+
+        foreach (char c in info.myText.ToCharArray())
+        {
+            yield return new WaitForSeconds(delay);
+            dialogueText.text += c;
+
+        }
+        isCurrentlyTyping = false;
+        yield return new WaitForSeconds(0.5f);
+
+        DequeueAutoPlay();
+
+    }
+
     private void CompleteText()
     {
         dialogueText.text = completeText;

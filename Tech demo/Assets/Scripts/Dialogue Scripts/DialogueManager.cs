@@ -39,6 +39,10 @@ public class DialogueManager : MonoBehaviour
     public Queue<DialogueBase.Info> dialogueInfo = new Queue<DialogueBase.Info>();
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            DequeueDialogue();
+        }
         if (SceneManager.GetActiveScene().name == "Boss1")
         {   
             bossani = GameObject.Find("ForestBoss2").GetComponent<Animator>();
@@ -113,6 +117,7 @@ public class DialogueManager : MonoBehaviour
             bossani.SetBool("dialoguePlay", false);
         }
  
-
+        
     }
+  
 }

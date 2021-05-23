@@ -3514,6 +3514,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 402161045117807077, guid: b17e9dc8951a1284fab21fefe4517fbd,
         type: 3}
+      propertyPath: bgm
+      value: 
+      objectReference: {fileID: 5453091324146268814, guid: f6154c66631d0f340ac8d972b8f43546,
+        type: 3}
+    - target: {fileID: 402161045117807077, guid: b17e9dc8951a1284fab21fefe4517fbd,
+        type: 3}
       propertyPath: vcam
       value: 
       objectReference: {fileID: 245412615}

@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        
         fp = transform.Find("firePoint").gameObject;
         if (instance !=null)
         {
@@ -268,6 +269,5 @@ public class PlayerController : MonoBehaviour
         {
             vcam.m_Lens.OrthographicSize = 10f;
         }
-
     }
 }

@@ -50,8 +50,10 @@ public class PauseMenu : MonoBehaviour
     }
     public void GotoMainMenu()
     {
+        GameObject BGM = GameObject.Find("BGM").gameObject;
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+        Destroy(BGM);
         Destroy(canvas);
         Destroy(cam);
         Destroy(Player);

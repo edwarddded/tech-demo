@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
     public void Start()
     {
         renderer = gameObject.GetComponent<SpriteRenderer>();
+        
     }
     
     private IEnumerator FlashAfterDamage()
@@ -40,21 +41,7 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(2);
         invincible = false;
     }
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    if (!invincible)
-    //    {
-    //        if (other.gameObject.tag == "swamp")
-    //        {
-    //            BeginPoint = GameObject.Find("BeginPortal").transform.position;
-    //            Debug.Log(BeginPoint);
-    //            Debug.Log(other.gameObject.name);
-    //            health -= damage;
-    //            Debug.Log(health);
-    //            gameObject.transform.position = BeginPoint;
-    //        }
-    //    }
-    // }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "swamp")
@@ -99,6 +86,8 @@ public class Health : MonoBehaviour
         {
             SceneManager.LoadScene(6);
             Destroy(gameObject);
+            GameObject BGM = GameObject.Find("BGM").gameObject;
+            Destroy(BGM);
         }
         else if(health == 4)
         {

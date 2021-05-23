@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     public Animator AnimatorOfCharacter;
     public static PlayerController instance;
     public CinemachineVirtualCamera vcam;
+
+    public AudioClip[] audios;
+    public GameObject bgm;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,7 @@ public class PlayerController : MonoBehaviour
         }
         instance = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(bgm);
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,7 +79,9 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(5);
             gameObject.transform.position = new Vector2(-23.8f, 28);
-            
+            bgm.GetComponent<AudioSource>().clip = audios[1];
+            bgm.GetComponent<AudioSource>().Play();
+
         }
        
         if (collision.gameObject.tag == "FirePortal")
@@ -96,16 +102,22 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(10);
             gameObject.transform.position = new Vector2(-22.4f, -11);
+            bgm.GetComponent<AudioSource>().clip = audios[3];
+            bgm.GetComponent<AudioSource>().Play();
         }
         if (collision.gameObject.tag == "ToFire")
         {
             SceneManager.LoadScene(7);
             gameObject.transform.position = new Vector2(-25f, 12.3f);
+            bgm.GetComponent<AudioSource>().clip = audios[2];
+            bgm.GetComponent<AudioSource>().Play();
         }
         if (collision.gameObject.tag =="ToIce")
         {
             SceneManager.LoadScene(11);
             gameObject.transform.position = new Vector2(-23.2f, 4.5f);
+            bgm.GetComponent<AudioSource>().clip = audios[4];
+            bgm.GetComponent<AudioSource>().Play();
         }
         if (collision.gameObject.tag == "IcePortal")
         {
@@ -125,11 +137,14 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(14);
             gameObject.transform.position = new Vector2(35.7f, 1);
+            bgm.GetComponent<AudioSource>().clip = audios[5];
+            bgm.GetComponent<AudioSource>().Play();
         }
         if (collision.gameObject.tag == "ToFinal")
         {
             SceneManager.LoadScene(15);
             gameObject.transform.position = new Vector3(-4f, -1.11f);
+            
         }
         if (collision.gameObject.tag == "ToFirst")
         {

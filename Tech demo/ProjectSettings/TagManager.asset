@@ -23,6 +23,8 @@ TagManager:
   - IcePortal
   - ToFinal
   - ToFirst
+  - OutOfCutscene
+  - theplayer
   layers:
   - Default
   - TransparentFX

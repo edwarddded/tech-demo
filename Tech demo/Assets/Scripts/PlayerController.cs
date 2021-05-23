@@ -152,6 +152,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(2);
             Destroyall();
         }
+     
     }
     void Destroyall()
     {

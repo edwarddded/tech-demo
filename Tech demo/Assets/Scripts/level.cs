@@ -11,7 +11,7 @@ public class level : MonoBehaviour
     public void Play()
     {
 
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(1);
     }
     public void Tutorial()
     {
@@ -26,6 +26,7 @@ public class level : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit Game");
     }
+
 
 }
 

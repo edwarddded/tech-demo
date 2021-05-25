@@ -18,6 +18,9 @@ public class Health : MonoBehaviour
     private Vector3 BeginPoint;
 
     new SpriteRenderer renderer;
+
+    public GameObject healingAnimationPrefab;
+
     public void Start()
     {
         renderer = gameObject.GetComponent<SpriteRenderer>();
@@ -127,6 +130,8 @@ public class Health : MonoBehaviour
 
     public void RestoreHealth(int healAmount)
     {
+        var heal = Instantiate(healingAnimationPrefab, transform.position + new Vector3(0, 1.5f, 0), transform.rotation);
+        heal.transform.parent = gameObject.transform;
         health += healAmount;
         if(health > 4)
         {

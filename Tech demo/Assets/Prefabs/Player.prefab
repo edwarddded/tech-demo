@@ -187,6 +187,8 @@ MonoBehaviour:
     m_Bits: 1024
   AnimatorOfCharacter: {fileID: 5763554479114835428}
   vcam: {fileID: 0}
+  audios: []
+  bgm: {fileID: 0}
 --- !u!114 &402161045117807072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +301,8 @@ MonoBehaviour:
   emptyHearts2: {fileID: 0}
   emptyHearts3: {fileID: 0}
   emptyHearts4: {fileID: 0}
+  healingAnimationPrefab: {fileID: 9139402319500581275, guid: e4bbe493173b4154f855eb9f8e73ac7c,
+    type: 3}
 --- !u!61 &3049106472315341637
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2ba59ca12024e57b90a6900697848c, type: 3}
+  m_Name: IceNPC dialogue
+  m_EditorClassIdentifier: 
+  dialogueinfo:
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
+    myText: .....Who are you?
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
+    myText: Um...can you make way please?
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
+    myText: huh?
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 7b0acf444a3c94ebbacf9b23bfb4356c, type: 3}
+    myText: .....
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
+    myText: are you planning on disturbing lady Hielo?
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 0ce1289c3401245ba9226d8f6650abf4, type: 3}
+    myText: Just so you know, she might be nice but she does not like suprise visits.
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
+    myText: ......say.
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
+    myText: I feel like i've seen you come here before.
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
+    myText: Right...you still haven't given up?
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
+    myText: What.. I dont know you!!
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 0ce1289c3401245ba9226d8f6650abf4, type: 3}
+    myText: Interesting. Guess you'll learn it sooner or later.
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
+    myText: 'Bye kid. Goodluck with whatever you''re planning to achieve. '

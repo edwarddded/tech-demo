@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2ba59ca12024e57b90a6900697848c, type: 3}
+  m_Name: ending dialogue
+  m_EditorClassIdentifier: 
+  dialogueinfo:
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 7b0acf444a3c94ebbacf9b23bfb4356c, type: 3}
+    myText: .........huh?!
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 7b0acf444a3c94ebbacf9b23bfb4356c, type: 3}
+    myText: I'm back at the same place!?! what is the meaning behind this?!
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 9e4fd41a65ec2456688b293d0eeceb58, type: 3}
+    myText: ah...I tried to explain it to you, child.
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: b4a2581390cc0453d9101abbe36e6d0a, type: 3}
+    myText: I'm truly sorry this is happening to you.. I am...
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: b4a2581390cc0453d9101abbe36e6d0a, type: 3}
+    myText: I wish to see you move on from this, dedicate your time to your own wellbeing...
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 5ff929bf45e8042f6a704bad0f89dd3a, type: 3}
+    myText: what...I don't understand...
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 5ff929bf45e8042f6a704bad0f89dd3a, type: 3}
+    myText: Am I stuck in some sort of repeating nightmare?!!?
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 7b0acf444a3c94ebbacf9b23bfb4356c, type: 3}
+    myText: Right.........I've been through this before....
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
+    myText: Unfortunately, yes.
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
+    myText: You've been trying to look for this person endless times..dedicating
+      hours and hours of your life in hopes to find them
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
+    myText: and you won't listen to the truth either.
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 5ff929bf45e8042f6a704bad0f89dd3a, type: 3}
+    myText: ...the truth? what truth?
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 9e4fd41a65ec2456688b293d0eeceb58, type: 3}
+    myText: the truth that there is no one to look for. When I try to explain it
+      to you..that the person you are looking for is long gone
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 9e4fd41a65ec2456688b293d0eeceb58, type: 3}
+    myText: You start to lose your mind, deny it and even threaten with your life.
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: b4a2581390cc0453d9101abbe36e6d0a, type: 3}
+    myText: I had no choice...in order to keep you alive and safe, in order to stop
+      you
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: b4a2581390cc0453d9101abbe36e6d0a, type: 3}
+    myText: I had to erase your memory and plant the idea that the person you are
+      looking for is still alive
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
+    myText: In hopes that when you reach the end of this loop,  you will finally
+      understand, give up, and think more rationally about it
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 4958e3884b7f14aa9985390f3e694b6e, type: 3}
+    myText: .....what......this is just crazy......I don't believe anything you're
+      saying...where are they?! did you do something to them?!
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 9e4fd41a65ec2456688b293d0eeceb58, type: 3}
+    myText: No, Eddy....they are gone..they have been gone for over 10 years now.
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 4958e3884b7f14aa9985390f3e694b6e, type: 3}
+    myText: what...no way........h-how....when......
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 4958e3884b7f14aa9985390f3e694b6e, type: 3}
+    myText: If they are gone, then I will follow them. Wherever it is, I'll go.
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 9e4fd41a65ec2456688b293d0eeceb58, type: 3}
+    myText: ...what are you saying?! Don't tell me you're..!!
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 38aca950659734ef894451cccac6640b, type: 3}
+    myText: .................
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 06a00a3359ecf4b86a5d63b383916375, type: 3}
+    myText: NO!! I HAVE NO CHOICE.. I HATE TO PUT YOU THROUGH THIS OVER AND OVER....
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 947e72bc456a84d06ad92df02a3840d9, type: 3}
+    myText: but I have no choice...I'm sorry...I cannot break my promise to them........I
+      cannot let you leave....I'm sorry.....

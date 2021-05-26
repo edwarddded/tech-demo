@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2ba59ca12024e57b90a6900697848c, type: 3}
+  m_Name: second ending dialogue
+  m_EditorClassIdentifier: 
+  dialogueinfo:
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 7b0acf444a3c94ebbacf9b23bfb4356c, type: 3}
+    myText: AGH..?! what is going on....my head hurts......
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
+    myText: ..........
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: b4a2581390cc0453d9101abbe36e6d0a, type: 3}
+    myText: Im sorry, kid...Maybe next time....you will finally understand.
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 4958e3884b7f14aa9985390f3e694b6e, type: 3}
+    myText: ..........
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 4958e3884b7f14aa9985390f3e694b6e, type: 3}
+    myText: Ah........
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 6035e57a262df4725a2a25c149dce089, type: 3}
+    myText: What is going on..........was I taking a long nap.....?
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 6035e57a262df4725a2a25c149dce089, type: 3}
+    myText: Right.....I need to look for them.......I need to start my journey.....
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 08673bda89c28459ead7c73be620ddcc, type: 3}
+    myText: I......have to......

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2ba59ca12024e57b90a6900697848c, type: 3}
+  m_Name: ice boss Dialogue
+  m_EditorClassIdentifier: 
+  dialogueinfo:
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 69aea18f4922c4502ab5101ecb3cbf1a, type: 3}
+    myText: Oh my... you must be...
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
+    myText: I finally made it to you!!
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 9e4fd41a65ec2456688b293d0eeceb58, type: 3}
+    myText: poor soul... you must have been through a lot to get here...
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 9e4fd41a65ec2456688b293d0eeceb58, type: 3}
+    myText: I heard you're looking for someone
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
+    myText: Unfortunately, I cannot help you.
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
+    myText: What?! I was told you were going to be helpful!!
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
+    myText: Whatever, I saw this coming. I dont need your help anyway!
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 9e4fd41a65ec2456688b293d0eeceb58, type: 3}
+    myText: ....You don't understand. This isn't your first time here.
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
+    myText: ........what?
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
+    myText: Your hardwork and dedication..I hate to see it go in vain
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: b4a2581390cc0453d9101abbe36e6d0a, type: 3}
+    myText: I hate seeing you in pain....
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
+    myText: What are you even talking about?! Just get out of my way!
+  - myName: Lady Hielo
+    portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
+    myText: Fine..if this makes you feel more acomplished then so be it. I will play
+      along

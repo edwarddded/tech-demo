@@ -45,7 +45,9 @@ MonoBehaviour:
     myText: What.. I dont know you!!
   - myName: Old man
     portrait: {fileID: 21300000, guid: 0ce1289c3401245ba9226d8f6650abf4, type: 3}
-    myText: Interesting. Guess you'll learn it sooner or later.
+    myText: Interesting. Guess you'll learn it sooner or later... well, If there's
+      anyone who might help you, I guess its her.
   - myName: Old man
     portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
-    myText: 'Bye kid. Goodluck with whatever you''re planning to achieve. '
+    myText: 'Try having a talk with Lady Hielo ....Bye kid. Goodluck with whatever
+      you''re planning to achieve. '

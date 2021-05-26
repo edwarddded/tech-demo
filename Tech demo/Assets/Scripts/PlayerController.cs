@@ -170,6 +170,11 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void DestroyBGM()
+    {
+        GameObject BGM = GameObject.Find("BGM").gameObject;
+        Destroy(BGM);
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -261,7 +266,7 @@ public class PlayerController : MonoBehaviour
         {
             isjumping = false;
         }
-
+        //resize the camera when player get into boss 1
         if (SceneManager.GetActiveScene().name == "Boss1")
         {
             vcam.m_Lens.OrthographicSize = 28f;
@@ -269,6 +274,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             vcam.m_Lens.OrthographicSize = 10f;
+        }
+        //destroy BGM when player get into final scene to meet up her dear
+        if (SceneManager.GetActiveScene().name == "Ending  Scene")
+        {
+            DestroyBGM();
         }
     }
 }

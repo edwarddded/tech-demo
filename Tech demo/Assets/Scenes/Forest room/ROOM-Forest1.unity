@@ -2970,7 +2970,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.5311353, y: -0.27106825}
+  - {x: -2.8281734, y: -0.27729502}
   - {x: 1.5077837, y: -0.23609175}
 --- !u!212 &621496170
 SpriteRenderer:
@@ -9162,6 +9162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453091324146268813, guid: f6154c66631d0f340ac8d972b8f43546,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.408
       objectReference: {fileID: 0}
     - target: {fileID: 5453091324146268814, guid: f6154c66631d0f340ac8d972b8f43546,
         type: 3}

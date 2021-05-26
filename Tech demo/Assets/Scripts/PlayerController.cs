@@ -145,7 +145,9 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(15);
             gameObject.transform.position = new Vector3(-4f, -1.11f);
-            
+            //destroy BGM when player get into final scene to meet up her dear
+            DestroyBGM();
+
         }
         if (collision.gameObject.tag == "ToFirst")
         {
@@ -275,10 +277,7 @@ public class PlayerController : MonoBehaviour
         {
             vcam.m_Lens.OrthographicSize = 10f;
         }
-        //destroy BGM when player get into final scene to meet up her dear
-        if (SceneManager.GetActiveScene().name == "Ending  Scene")
-        {
-            DestroyBGM();
-        }
+        
+       
     }
 }

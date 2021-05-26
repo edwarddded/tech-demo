@@ -3685,6 +3685,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 402161045117807080, guid: b17e9dc8951a1284fab21fefe4517fbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 402161045117807082, guid: b17e9dc8951a1284fab21fefe4517fbd,
         type: 3}
       propertyPath: m_Mass
@@ -5745,9 +5750,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 50
+  m_MaxValue: 60
   m_WholeNumbers: 0
-  m_Value: 50
+  m_Value: 6
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9172,6 +9177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453091324146268814, guid: f6154c66631d0f340ac8d972b8f43546,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6154c66631d0f340ac8d972b8f43546, type: 3}

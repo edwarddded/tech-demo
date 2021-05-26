@@ -22,7 +22,7 @@ public class Boss : MonoBehaviour
     {
      
         Portal = GameObject.Find("BeginPortal").transform;
-        BossHealth = 50f;
+        BossHealth = 60f;
         healthBar = GameObject.Find("Healthbar").GetComponent<BossHealthBar>();
         healthBar.setMaxHealth(BossHealth);
 
@@ -63,9 +63,24 @@ public class Boss : MonoBehaviour
         playerBossSkill.hasForestSkill = true;
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         Destroy(sr);
+        destroyLaserHand();
         Vector3 tf = new Vector3(111, 6.6f, 0);
         Instantiate(FirePortal, tf, Portal.transform.rotation);
         Ani.SetBool("dialoguePlay", true);
+    }
+    void destroyLaserHand()
+    {
+        GameObject gameObject1 = GameObject.Find("GameObject").gameObject;
+        GameObject leftbottom = GameObject.Find("Left Bottom").gameObject;
+        GameObject topright = GameObject.Find("Top Right").gameObject;
+        GameObject rightbottom = GameObject.Find("Right Bottom").gameObject;
+        if (gameObject1 != null || leftbottom != null || topright != null || rightbottom != null)
+        {
+            Destroy(gameObject1);
+            Destroy(leftbottom);
+            Destroy(topright);
+            Destroy(rightbottom);
+        }
     }
     void SetAttackAnimation()
     {

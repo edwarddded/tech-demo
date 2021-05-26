@@ -44,8 +44,8 @@ public class DialogueManager : MonoBehaviour
             DequeueDialogue();
         }
         if (SceneManager.GetActiveScene().name == "Boss1")
-        {   
-            bossani = GameObject.Find("ForestBoss2").GetComponent<Animator>();
+        {
+                bossani = GameObject.Find("ForestBoss2").GetComponent<Animator>();
         }
     }
 

@@ -8657,7 +8657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6e3cf0fa52a4a4fabd0f45fb82bae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 9a3638768d12b4f44829ba4b867a22fa, type: 2}
+  dialogue: {fileID: 11400000, guid: cd02b58324f8840798c28f4e1bbd1091, type: 2}
   speechBubble: {fileID: 105985692}
 --- !u!61 &2101252156
 BoxCollider2D:

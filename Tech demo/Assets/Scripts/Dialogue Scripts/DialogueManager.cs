@@ -43,10 +43,6 @@ public class DialogueManager : MonoBehaviour
         {
             DequeueDialogue();
         }
-        if (SceneManager.GetActiveScene().name == "Boss1")
-        {
-                bossani = GameObject.Find("ForestBoss2").GetComponent<Animator>();
-        }
     }
 
     public void EnqueueDialogue (DialogueBase db)
@@ -54,10 +50,8 @@ public class DialogueManager : MonoBehaviour
    
         dialogueBox.SetActive(true);
         thePlayer.canMove = false;
-        if (bossani != null)
-        {
-            bossani.SetBool("dialoguePlay", true);
-        }
+        Time.timeScale = 0;
+       
         
 
         dialogueInfo.Clear();
@@ -113,10 +107,7 @@ public class DialogueManager : MonoBehaviour
 
         dialogueBox.SetActive(true);
         thePlayer.canMove = false;
-        if (bossani != null)
-        {
-            bossani.SetBool("dialoguePlay", true);
-        }
+       
 
 
         dialogueInfo.Clear();
@@ -178,6 +169,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         thePlayer.canMove = true;
+        Time.timeScale = 1;
         if (bossani != null)
         {
             bossani.SetBool("dialoguePlay", false);

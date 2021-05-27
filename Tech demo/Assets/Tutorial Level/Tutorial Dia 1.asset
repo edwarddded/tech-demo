@@ -25,3 +25,7 @@ MonoBehaviour:
     portrait: {fileID: 7416825305952834461, guid: c37197bad3acd4fdbbdd74f65660f043,
       type: 3}
     myText: Here, Try to come over here
+  - myName: Soul
+    portrait: {fileID: 7416825305952834461, guid: c37197bad3acd4fdbbdd74f65660f043,
+      type: 3}
+    myText: Here, Try to come over here

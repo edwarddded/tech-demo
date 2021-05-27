@@ -37,3 +37,6 @@ MonoBehaviour:
   - myName: Eddy
     portrait: {fileID: 21300000, guid: 08673bda89c28459ead7c73be620ddcc, type: 3}
     myText: I......have to......
+  - myName: Eddy
+    portrait: {fileID: 21300000, guid: 08673bda89c28459ead7c73be620ddcc, type: 3}
+    myText: I......have to......

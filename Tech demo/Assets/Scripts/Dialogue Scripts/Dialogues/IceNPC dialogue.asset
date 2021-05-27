@@ -51,3 +51,7 @@ MonoBehaviour:
     portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
     myText: 'Try having a talk with Lady Hielo ....Bye kid. Goodluck with whatever
       you''re planning to achieve. '
+  - myName: Old man
+    portrait: {fileID: 21300000, guid: 8c48281ccaca34516bf1525cdb52ba03, type: 3}
+    myText: 'Try having a talk with Lady Hielo ....Bye kid. Goodluck with whatever
+      you''re planning to achieve. '

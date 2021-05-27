@@ -151,6 +151,11 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "ToFirst")
         {
+            SceneManager.LoadScene(2);
+            Destroyall();
+        }
+        if (collision.gameObject.tag == "ToCutScene")
+        {
             SceneManager.LoadScene(1);
             Destroyall();
         }

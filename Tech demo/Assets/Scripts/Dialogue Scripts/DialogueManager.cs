@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
    
         dialogueBox.SetActive(true);
         thePlayer.canMove = false;
-        Time.timeScale = 0;
+        
        
         
 
@@ -63,6 +63,7 @@ public class DialogueManager : MonoBehaviour
         }
 
          DequeueDialogue();
+        Time.timeScale = 0;
     }
 
     public void DequeueDialogue()

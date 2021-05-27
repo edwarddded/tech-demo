@@ -25,6 +25,7 @@ TagManager:
   - ToFirst
   - OutOfCutscene
   - theplayer
+  - ToCutScene
   layers:
   - Default
   - TransparentFX

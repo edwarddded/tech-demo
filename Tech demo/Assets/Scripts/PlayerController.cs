@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "ToFirst")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
             Destroyall();
         }
      

@@ -15,7 +15,8 @@ public class endscreen : MonoBehaviour
             yield return new WaitForSeconds(15);
           
             SceneManager.LoadSceneAsync(0);
-
+            PlayerController playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+            playerController.Destroyall();
         }
     }
 

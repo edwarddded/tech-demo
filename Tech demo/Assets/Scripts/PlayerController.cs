@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
         }
      
     }
-    void Destroyall()
+    public void Destroyall()
     {
         GameObject canvas = GameObject.Find("Canvas").gameObject;
         GameObject MC = GameObject.Find("Main Camera").gameObject;
@@ -177,7 +177,7 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void DestroyBGM()
+    public void DestroyBGM()
     {
         GameObject BGM = GameObject.Find("BGM").gameObject;
         Destroy(BGM);

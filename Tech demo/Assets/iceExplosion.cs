@@ -6,7 +6,6 @@ public class iceExplosion : MonoBehaviour
 {
     private IceBoss iceboss;
      Animator Animator;
-    public bool canMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,25 +16,14 @@ public class iceExplosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (iceboss.time < 2.5)
-        {
+        if (iceboss.time < 2.5 )
+        {   
             Animator.SetBool("IsIceExplosion", true);
         }
         else
         {
             Animator.SetBool("IsIceExplosion", false);
         }
-        if (!canMove) // freezing attack
-        {
-           
-            Animator.SetBool("hasStopped", true);
-
-            return;
-
-        }
-        else
-        {
-            Animator.SetBool("hasStopped", false);
-        }
+       
     }
 }

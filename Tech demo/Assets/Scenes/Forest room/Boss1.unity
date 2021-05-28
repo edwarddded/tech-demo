@@ -4078,6 +4078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1501de0cf2e014b55a651313f8cd8cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
+  ForestBossAni: {fileID: 0}
   dialogueBox: {fileID: 168561671}
   dialogueName: {fileID: 974795694}
   dialogueText: {fileID: 1634010649}

@@ -53,7 +53,3 @@ MonoBehaviour:
     portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
     myText: Fine..if this makes you feel more acomplished then so be it. I will play
       along
-  - myName: Lady Hielo
-    portrait: {fileID: 21300000, guid: 3e99f84286f4146debd0d3d94d03b5d6, type: 3}
-    myText: Fine..if this makes you feel more acomplished then so be it. I will play
-      along

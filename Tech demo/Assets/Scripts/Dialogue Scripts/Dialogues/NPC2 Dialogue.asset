@@ -66,6 +66,3 @@ MonoBehaviour:
   - myName: Frenemie
     portrait: {fileID: 21300000, guid: 13a97811b54d84ac3a7634d35af663a7, type: 3}
     myText: See you never.
-  - myName: Frenemie
-    portrait: {fileID: 21300000, guid: 13a97811b54d84ac3a7634d35af663a7, type: 3}
-    myText: See you never.

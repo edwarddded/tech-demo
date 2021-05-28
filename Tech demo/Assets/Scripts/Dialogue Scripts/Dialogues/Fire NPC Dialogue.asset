@@ -35,6 +35,3 @@ MonoBehaviour:
   - myName: Fire Spirit
     portrait: {fileID: 21300000, guid: c63ac437995804e44bbdc0332cc11f41, type: 3}
     myText: try not to get grilled~!
-  - myName: Eddy
-    portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
-    myText: yeah, thanks.

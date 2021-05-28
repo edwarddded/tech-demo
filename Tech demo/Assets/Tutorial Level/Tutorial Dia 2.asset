@@ -31,8 +31,3 @@ MonoBehaviour:
       type: 3}
     myText: 'But Just remind you, don''t waste it, once you use ability, you can''t
       use it again till you collect more. '
-  - myName: Soul
-    portrait: {fileID: 7416825305952834461, guid: c37197bad3acd4fdbbdd74f65660f043,
-      type: 3}
-    myText: 'But Just remind you, don''t waste it, once you use ability, you can''t
-      use it again till you collect more. '

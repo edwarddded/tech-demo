@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
-    private Animator bossani;
     private GameObject Boss;
     public string sceneName;
+    private Animator ForestBossAni;
+    private GameObject Iceboss;
     private void Awake()
     {
         if (instance != null)
@@ -25,9 +26,6 @@ public class DialogueManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
         thePlayer = FindObjectOfType<PlayerController>();
-        theBoss = FindObjectOfType<IceBoss>();
-        explosion = FindObjectOfType<iceExplosion>();
-
     }
 
     public GameObject dialogueBox;
@@ -38,7 +36,6 @@ public class DialogueManager : MonoBehaviour
     public bool isCurrentlyTyping;
     private string completeText;
     private PlayerController thePlayer;
-    private IceBoss theBoss;
     private iceExplosion explosion;
 
 
@@ -50,6 +47,10 @@ public class DialogueManager : MonoBehaviour
         {
             DequeueDialogue();
         }
+        if (SceneManager.GetActiveScene().name == "Boss1")
+        {
+            ForestBossAni = GameObject.Find("ForestBoss2").GetComponent<Animator>();
+        }
     }
 
     public void EnqueueDialogue (DialogueBase db)
@@ -57,12 +58,21 @@ public class DialogueManager : MonoBehaviour
    
         dialogueBox.SetActive(true);
         thePlayer.canMove = false;
-        if(sceneName == "Ice-Boss")
+
+        if (thePlayer.canMove == false)
         {
-            theBoss.canMove = false;
-            explosion.canMove = false;
+            if (SceneManager.GetActiveScene().name == "Ice-Boss")
+            {
+                Iceboss = GameObject.Find("IceBoss").gameObject;
+                Iceboss.GetComponent<IceBoss>().canMove = false;
+            }
+                
         }
-       
+        if (ForestBossAni != null)
+        {
+            ForestBossAni.SetBool("isDialoguePlay", true);
+        }
+  
        
 
 
@@ -121,11 +131,7 @@ public class DialogueManager : MonoBehaviour
 
         dialogueBox.SetActive(true);
         thePlayer.canMove = false;
-        if (sceneName == "Ice-Boss")
-        {
-            theBoss.canMove = false;
-            explosion.canMove = false;
-        }
+      
 
 
 
@@ -188,19 +194,24 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         thePlayer.canMove = true;
-        if (sceneName == "Ice-Boss")
+        bossmove();
+      
+        if (ForestBossAni != null)
         {
-            theBoss.canMove = true;
-            explosion.canMove = true;
+            ForestBossAni.SetBool("isDialoguePlay", false);
         }
-       
-       
-        if (bossani != null)
+    }
+
+    public void bossmove()
+    {
+        if (thePlayer.canMove == true)
         {
-            bossani.SetBool("dialoguePlay", false);
+            if (SceneManager.GetActiveScene().name == "Ice-Boss")
+            {
+                Iceboss = GameObject.Find("IceBoss").gameObject;
+                Iceboss.GetComponent<IceBoss>().canMove = true;
+            }
         }
- 
-        
     }
   
 }

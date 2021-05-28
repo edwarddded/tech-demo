@@ -37,6 +37,3 @@ MonoBehaviour:
   - myName: Player
     portrait: {fileID: 21300000, guid: 5ff929bf45e8042f6a704bad0f89dd3a, type: 3}
     myText: I have to move fast..!
-  - myName: Player
-    portrait: {fileID: 21300000, guid: 5ff929bf45e8042f6a704bad0f89dd3a, type: 3}
-    myText: I have to move fast..!

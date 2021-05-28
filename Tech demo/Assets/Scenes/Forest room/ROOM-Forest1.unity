@@ -2090,6 +2090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1501de0cf2e014b55a651313f8cd8cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
   dialogueBox: {fileID: 579329458}
   dialogueName: {fileID: 552713955}
   dialogueText: {fileID: 1564774054}
@@ -3769,8 +3770,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853d034971d0fd64fa4c887ab77c6405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy1: {fileID: 6755375341525000729, guid: 2262173c98ad68a4082e39b279b89ad7, type: 3}
-  Enemy2: {fileID: 1100164881721842059, guid: c650ca87727058b4f83f68ca98e2cc32, type: 3}
+  Enemy1: {fileID: 8323511412006162403, guid: b2928d9151639da4f9f520ea8fc83b70, type: 3}
+  Enemy2: {fileID: 8323511412006162403, guid: b2928d9151639da4f9f520ea8fc83b70, type: 3}
   Enemy3: {fileID: 8323511412006162403, guid: b2928d9151639da4f9f520ea8fc83b70, type: 3}
 --- !u!4 &824225262
 Transform:

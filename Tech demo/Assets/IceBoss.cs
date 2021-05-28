@@ -22,6 +22,7 @@ public class IceBoss : MonoBehaviour
 
     private BossHealthBar healthBar;
     public GameObject ToicePortal;
+    public GameObject dialogue;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +58,7 @@ public class IceBoss : MonoBehaviour
         {
             Firepoint.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if (!canMove) // freezing player
+        if (canMove == false) // freezing player
         {
             rb.velocity = Vector2.zero;
             Ani.SetBool("hasStopped", true);
@@ -65,8 +66,9 @@ public class IceBoss : MonoBehaviour
             return;
 
         }
-        else
+        else if (canMove == true)
         {
+           
             Ani.SetBool("hasStopped", false);
         }
     }
@@ -102,7 +104,6 @@ public class IceBoss : MonoBehaviour
     {
 
         time = time - Time.deltaTime;
-        Debug.Log(time);
         if (time < 0)
         {
             time = 8f;
@@ -113,6 +114,7 @@ public class IceBoss : MonoBehaviour
 
             if (transform.localScale.x < 0.1)
             {
+
                 Firepoint.transform.rotation = Quaternion.Euler(Firepoint.rotation.x, 180, 0);
 
             }

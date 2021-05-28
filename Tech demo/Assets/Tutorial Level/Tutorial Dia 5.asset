@@ -22,8 +22,3 @@ MonoBehaviour:
       type: 3}
     myText: now, find the veins, press Spacebar to jump, and when you touch veins,
       press Up button to climb it. try to get out of here
-  - myName: Soul
-    portrait: {fileID: -2640565209637857511, guid: d5ab4dfb971c345ab81234f3d7db3823,
-      type: 3}
-    myText: now, find the veins, press Spacebar to jump, and when you touch veins,
-      press Up button to climb it. try to get out of here

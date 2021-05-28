@@ -26,8 +26,3 @@ MonoBehaviour:
       type: 3}
     myText: different enemies have different abilities, try to figure out how to
       use them.
-  - myName: Soul
-    portrait: {fileID: -2640565209637857511, guid: d5ab4dfb971c345ab81234f3d7db3823,
-      type: 3}
-    myText: different enemies have different abilities, try to figure out how to
-      use them.

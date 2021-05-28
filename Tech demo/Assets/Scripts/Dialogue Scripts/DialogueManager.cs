@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
     private Animator bossani;
     private GameObject Boss;
+    public string sceneName;
     private void Awake()
     {
         if (instance != null)
@@ -21,8 +22,11 @@ public class DialogueManager : MonoBehaviour
     }
     private void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
         thePlayer = FindObjectOfType<PlayerController>();
-        
+        theBoss = FindObjectOfType<IceBoss>();
+
     }
 
     public GameObject dialogueBox;
@@ -33,7 +37,8 @@ public class DialogueManager : MonoBehaviour
     public bool isCurrentlyTyping;
     private string completeText;
     private PlayerController thePlayer;
- 
+    private IceBoss theBoss;
+
 
 
     public Queue<DialogueBase.Info> dialogueInfo = new Queue<DialogueBase.Info>();
@@ -50,9 +55,14 @@ public class DialogueManager : MonoBehaviour
    
         dialogueBox.SetActive(true);
         thePlayer.canMove = false;
-        
+        if(sceneName == "Ice-Boss")
+        {
+            theBoss.canMove = false;
+        }
        
-        
+       
+
+
 
         dialogueInfo.Clear();
         foreach (DialogueBase.Info info in db.dialogueinfo)
@@ -63,7 +73,7 @@ public class DialogueManager : MonoBehaviour
         }
 
          DequeueDialogue();
-        Time.timeScale = 0;
+        
     }
 
     public void DequeueDialogue()
@@ -108,7 +118,11 @@ public class DialogueManager : MonoBehaviour
 
         dialogueBox.SetActive(true);
         thePlayer.canMove = false;
-       
+        if (sceneName == "Ice-Boss")
+        {
+            theBoss.canMove = false;
+        }
+
 
 
         dialogueInfo.Clear();
@@ -170,7 +184,12 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         thePlayer.canMove = true;
-        Time.timeScale = 1;
+        if (sceneName == "Ice-Boss")
+        {
+            theBoss.canMove = true;
+        }
+       
+       
         if (bossani != null)
         {
             bossani.SetBool("dialoguePlay", false);

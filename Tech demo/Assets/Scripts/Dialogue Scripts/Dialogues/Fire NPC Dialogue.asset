@@ -38,6 +38,3 @@ MonoBehaviour:
   - myName: Eddy
     portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
     myText: yeah, thanks.
-  - myName: Eddy
-    portrait: {fileID: 21300000, guid: 3a1d3aa94130f46368d5adf2d04c16fb, type: 3}
-    myText: yeah, thanks.

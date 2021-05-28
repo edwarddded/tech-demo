@@ -18,12 +18,14 @@ public class IceBoss : MonoBehaviour
     public Transform Firepoint;
     public float spawnTime = 2;
     public float spawnDelay = 7;
+    public bool canMove;
 
     private BossHealthBar healthBar;
     public GameObject ToicePortal;
     // Start is called before the first frame update
     void Start()
     {
+        canMove = true;
         sr = gameObject.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         healthBar = GameObject.Find("Healthbar").GetComponent<BossHealthBar>();
@@ -55,6 +57,17 @@ public class IceBoss : MonoBehaviour
         {
             Firepoint.rotation = Quaternion.Euler(0, 0, 0);
         }
+        if (!canMove) // freezing player
+        {
+            rb.velocity = Vector2.zero;
+            Ani.SetBool("hasStopped", true);
+            return;
+
+        }
+        else
+        {
+            Ani.SetBool("hasStopped", false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -75,6 +88,8 @@ public class IceBoss : MonoBehaviour
 
     private void Update()
     {
+
+    
         SetAttackAnimation();
         if (Icebosshealth < 20)
         {

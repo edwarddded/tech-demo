@@ -61,6 +61,7 @@ public class IceBoss : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             Ani.SetBool("hasStopped", true);
+
             return;
 
         }
@@ -106,7 +107,7 @@ public class IceBoss : MonoBehaviour
         {
             time = 8f;
         }
-        if (time < 2.5)
+        if (time < 2.5 )
         {
             Ani.SetBool("IsAttack", true);
 

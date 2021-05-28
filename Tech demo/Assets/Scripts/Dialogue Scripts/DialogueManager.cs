@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
         sceneName = currentScene.name;
         thePlayer = FindObjectOfType<PlayerController>();
         theBoss = FindObjectOfType<IceBoss>();
+        explosion = FindObjectOfType<iceExplosion>();
 
     }
 
@@ -38,6 +39,7 @@ public class DialogueManager : MonoBehaviour
     private string completeText;
     private PlayerController thePlayer;
     private IceBoss theBoss;
+    private iceExplosion explosion;
 
 
 
@@ -58,6 +60,7 @@ public class DialogueManager : MonoBehaviour
         if(sceneName == "Ice-Boss")
         {
             theBoss.canMove = false;
+            explosion.canMove = false;
         }
        
        
@@ -121,6 +124,7 @@ public class DialogueManager : MonoBehaviour
         if (sceneName == "Ice-Boss")
         {
             theBoss.canMove = false;
+            explosion.canMove = false;
         }
 
 
@@ -187,6 +191,7 @@ public class DialogueManager : MonoBehaviour
         if (sceneName == "Ice-Boss")
         {
             theBoss.canMove = true;
+            explosion.canMove = true;
         }
        
        
